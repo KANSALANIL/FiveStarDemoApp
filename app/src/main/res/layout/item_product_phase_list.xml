@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_18sdp"
+    android:paddingBottom="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_18sdp">
+
+    <ProgressBar
+        android:id="@+id/progressBarMyPrograms"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPhase"
+        app:layout_constraintEnd_toEndOf="@+id/ivPhase"
+        app:layout_constraintStart_toStartOf="@+id/ivPhase"
+        app:layout_constraintTop_toTopOf="@+id/ivPhase" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivPhase"
+        android:layout_width="@dimen/_71sdp"
+        android:layout_height="@dimen/_71sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_7sdp" />
+
+    <ImageView
+        android:id="@+id/ivPlayVideo"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintBottom_toBottomOf="@id/ivPhase"
+        app:layout_constraintEnd_toEndOf="@id/ivPhase"
+        app:layout_constraintStart_toStartOf="@id/ivPhase"
+        app:layout_constraintTop_toTopOf="@id/ivPhase"
+        app:srcCompat="@drawable/ic_pause"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="@+id/ivPhase"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPhase"
+        app:layout_constraintStart_toEndOf="@+id/ivPhase"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:maxLines="1"
+        tools:text="Phase 1  |  Introduction"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivMaster"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:padding="@dimen/_4sdp"
+        android:contentDescription="@string/img_desc"
+        android:foreground="@drawable/ripple_box"
+        app:layout_constraintEnd_toStartOf="@id/ivHeart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selector_mastered"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/ivHeart"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:padding="@dimen/_4sdp"
+        android:contentDescription="@string/img_desc"
+        android:foreground="@drawable/ripple_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selector_favorite" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:textColor="@color/textWhiteTransparent50"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="00 : 00 : 39" />
+
+    <ProgressBar
+        android:id="@+id/pbProgram"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="10"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:progressDrawable="@drawable/drawable_progress_bar_blue"
+        app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@drawable/line"
+            android:layout_marginTop="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ivPhase"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

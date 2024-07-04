@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_43sdp"
+    android:paddingStart="@dimen/_17sdp"
+    android:paddingEnd="@dimen/_17sdp"
+    android:background="@color/grayDark"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/ivBackMenu"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:contentDescription="@string/app_name"
+        android:foreground="@drawable/ripple_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow_white"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/_24sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivBackMenu"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold_700"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_10ssp"
+            tools:text="Phase1" />
+
+        <TextView
+            android:id="@+id/tvToolbarVideoPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:maxLines="1"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_7ssp"
+            tools:text="94 Videos  |  5 PDF’s" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

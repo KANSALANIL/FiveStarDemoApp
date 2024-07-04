@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/box_black_dim_top_lr_corner_32"
+    android:paddingStart="@dimen/_17sdp"
+    android:paddingTop="@dimen/_28sdp"
+    android:paddingEnd="@dimen/_17sdp"
+    android:paddingBottom="@dimen/_28sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:ignore="spUsage">
+
+    <TextView
+        android:id="@+id/tvIndividualSubscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:fontFamily="@font/urbanist_bold_700"
+        android:text="@string/individual_subscription"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_17ssp"
+        app:layout_constraintBottom_toTopOf="@id/clPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:background="@drawable/box_gray_dark_border_graydim_corner_9"
+        android:foreground="@drawable/ripple_box_corner_14"
+        android:layout_marginBottom="@dimen/_13sdp"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        tools:ignore="UnusedAttribute">
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_extrabold_800"
+            tools:text="$99.90"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:text="@string/six_months"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_11sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:textAlignment="center"
+        android:textColor="@color/textWhiteTransparent60"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvTermsConditions"
+        app:layout_constraintEnd_toEndOf="@id/btnCancel"
+        app:layout_constraintStart_toStartOf="@id/btnPositive"
+        tools:text="@string/format_individual_membership_description_for_months" />
+
+    <TextView
+        android:id="@+id/tvTermsConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_21sdp"
+        android:fontFamily="@font/urbanist_bold_700"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/textBlue"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@id/btnPositive"
+        app:layout_constraintEnd_toEndOf="@id/btnCancel"
+        app:layout_constraintStart_toStartOf="@id/btnPositive"
+        android:text="@string/terms_and_conditions" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@style/ButtonSmallGrayStyle"
+        android:stateListAnimator="@null"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPositive"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/btnPositive"
+        style="@style/ButtonSmallBlueStyle"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        tools:ignore="UnusedAttribute"
+        android:text="@string/subscribe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

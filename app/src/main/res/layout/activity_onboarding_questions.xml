@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.OnboardingQuestionsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:paddingHorizontal="@dimen/_17sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:foreground="@drawable/ripple_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow_white"
+            tools:ignore="UnusedAttribute" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:contentDescription="@string/img_desc"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/onboard_logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnLetsGo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_17sdp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_28sdp">
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/urbanist_bold_700"
+                android:text="@string/just_a_few_questions"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_24ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSkillLevelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/what_is_your_skill_level"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/tvSkillLevel"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
+
+            <TextView
+                android:id="@+id/tvSkillLevel"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_select_level"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSkillLevelTitle" />
+
+            <ImageView
+                android:id="@+id/ivDownSkill"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:contentDescription="@string/img_desc"
+                android:foreground="@drawable/ripple_round"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/tvSkillLevel"
+                app:layout_constraintEnd_toEndOf="@id/tvSkillLevel"
+                app:layout_constraintTop_toTopOf="@id/tvSkillLevel"
+                app:srcCompat="@drawable/ic_down_arrow_white"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvPlayPositionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/which_position_do_you_play"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/tvSkillLevel"
+                app:layout_constraintTop_toBottomOf="@id/tvSkillLevel" />
+
+            <TextView
+                android:id="@+id/tvPlayPosition"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_select_position"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPlayPositionTitle" />
+
+            <ImageView
+                android:id="@+id/ivDownPlay"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:contentDescription="@string/img_desc"
+                android:foreground="@drawable/ripple_round"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/tvPlayPosition"
+                app:layout_constraintEnd_toEndOf="@id/tvPlayPosition"
+                app:layout_constraintTop_toTopOf="@id/tvPlayPosition"
+                app:srcCompat="@drawable/ic_down_arrow_white"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvWeekDaysTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/how_many_days_a_week"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/tvSkillLevel"
+                app:layout_constraintTop_toBottomOf="@id/tvPlayPosition" />
+
+            <TextView
+                android:id="@+id/tvWeekDays"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_select_amount_of_days"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWeekDaysTitle" />
+
+            <ImageView
+                android:id="@+id/ivDownDays"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:contentDescription="@string/img_desc"
+                android:foreground="@drawable/ripple_round"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/tvWeekDays"
+                app:layout_constraintEnd_toEndOf="@id/tvWeekDays"
+                app:layout_constraintTop_toTopOf="@id/tvWeekDays"
+                app:srcCompat="@drawable/ic_down_arrow_white"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnLetsGo"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginBottom="@dimen/_27sdp"
+        android:text="@string/lets_go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cdlList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_5sdp">
+
+        <include
+            layout="@layout/layout_bottom_sheet_list" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

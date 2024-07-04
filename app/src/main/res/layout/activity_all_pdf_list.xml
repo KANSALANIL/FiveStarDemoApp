@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.AllVideoListActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+
+    <TextView
+        android:id="@+id/tvAllVideos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:text="ALL PDF"
+        android:singleLine="true"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllPdf"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_28sdp"
+        android:clipToPadding="false"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_all_pdf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAllVideos" />
+
+    <TextView
+        android:id="@+id/tvNoDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_found"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_15ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbLoadMore"
+        style="@android:style/Widget.ProgressBar.Small.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

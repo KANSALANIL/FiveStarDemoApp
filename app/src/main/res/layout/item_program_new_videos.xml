@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="@dimen/_175sdp"
+    android:layout_height="@dimen/_112sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:foreground="@drawable/ripple_box_top_corner_10"
+    tools:ignore="UnusedAttribute">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_10sdp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProduct"
+        app:layout_constraintEnd_toEndOf="@+id/ivProduct"
+        app:layout_constraintStart_toStartOf="@+id/ivProduct"
+        app:layout_constraintTop_toTopOf="@+id/ivProduct"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/ivPlayVideo"
+        android:layout_width="@dimen/_31sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintBottom_toBottomOf="@id/ivProduct"
+        app:layout_constraintEnd_toEndOf="@id/ivProduct"
+        app:layout_constraintStart_toStartOf="@id/ivProduct"
+        app:layout_constraintTop_toTopOf="@id/ivProduct"
+        app:srcCompat="@drawable/ic_pause"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

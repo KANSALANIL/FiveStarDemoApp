@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="@dimen/_16sdp"
+    android:background="@drawable/box_black_dim_outline_blue_corner_28"
+    android:paddingBottom="@dimen/_22sdp"
+    tools:context=".mvp.activity.BaseActivity">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:gravity="center"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btnNegative"
+        style="@style/ButtonSmallGrayStyle"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:text="@string/ok"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/btnPositive"
+        style="@style/ButtonSmallBlueStyle"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/ok"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_18sdp"
+    android:paddingBottom="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_18sdp">
+
+    <ProgressBar
+        android:id="@+id/progressBarMyPrograms"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProgram"
+        app:layout_constraintEnd_toEndOf="@+id/ivProgram"
+        app:layout_constraintStart_toStartOf="@+id/ivProgram"
+        app:layout_constraintTop_toTopOf="@+id/ivProgram" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivProgram"
+        android:layout_width="@dimen/_71sdp"
+        android:layout_height="@dimen/_71sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_7sdp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="@+id/ivProgram"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProgram"
+        app:layout_constraintStart_toEndOf="@+id/ivProgram"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvProgramName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold_700"
+            android:maxLines="2"
+            tools:text="Technical Core 90"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVideoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:textColor="@color/textWhiteTransparent40"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProgramName"
+            tools:text="94 Videos   |   5 PDF’s" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@drawable/line"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivProgram"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

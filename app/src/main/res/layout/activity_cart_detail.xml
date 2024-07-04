@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.CardDetailActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ImageView
+        android:id="@+id/ivCardPlaceholder"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_144sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/placeholder_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolbar" />
+
+    <TextView
+        android:id="@+id/tvNameCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/name_on_card"
+        android:textAllCaps="true"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCardPlaceholder" />
+
+    <EditText
+        android:id="@+id/etCardHolder"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_29sdp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/box_black_corner_3"
+        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+        android:hint="@string/hint_full_name"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="35"
+        android:padding="@dimen/_8sdp"
+        android:singleLine="true"
+        android:textColor="@color/textWhite"
+        android:textColorHint="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameCard" />
+
+    <TextView
+        android:id="@+id/tvCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/card_number"
+        android:textAllCaps="true"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCardHolder" />
+
+    <EditText
+        android:id="@+id/etCardNumber"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_29sdp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/box_black_corner_3"
+        android:hint="@string/hint_cart_no"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="19"
+        android:padding="@dimen/_8sdp"
+        android:singleLine="true"
+        android:textColor="@color/textWhite"
+        android:textColorHint="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCardNumber" />
+
+    <TextView
+        android:id="@+id/tvExpiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/expiry_date"
+        android:textAllCaps="true"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+    <TextView
+        android:id="@+id/etExpiryDate"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_29sdp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@drawable/box_black_corner_3"
+        android:cursorVisible="false"
+        android:hint="@string/hint_date_cart"
+        android:imeOptions="actionNext"
+        android:inputType="date"
+        android:padding="@dimen/_8sdp"
+        android:singleLine="true"
+        android:textColor="@color/textWhite"
+        android:textColorHint="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExpiryDate"
+        tools:ignore="TextViewEdits" />
+
+    <TextView
+        android:id="@+id/tvCvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/cvv_code"
+        android:textAllCaps="true"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/etCardNumber" />
+
+    <EditText
+        android:id="@+id/etCvNumber"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_29sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/box_black_corner_3"
+        android:hint="@string/hint_cvv"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:padding="@dimen/_8sdp"
+        android:singleLine="true"
+        android:textColor="@color/textWhite"
+        android:textColorHint="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpiryDate" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

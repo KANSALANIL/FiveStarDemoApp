@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_6sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_blackdim_graydim_corner_7">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/_39sdp"
+        android:layout_height="@dimen/_39sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:riv_oval="true" />
+
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="03"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toTopOf="@+id/ivProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+        app:layout_constraintStart_toStartOf="@+id/ivProfile"
+        app:layout_constraintEnd_toEndOf="@id/ivProfile"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:layout_constraintTop_toTopOf="@id/ivProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfile">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Mental exercises "
+        android:includeFontPadding="false"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="fitCenter"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_circle_right" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

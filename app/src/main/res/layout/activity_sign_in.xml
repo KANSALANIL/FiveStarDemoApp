@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.SignInActivity">
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_55sdp"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <CheckBox
+        android:id="@+id/cbRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox_bg"
+        android:checked="false"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tvForgotPass"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toTopOf="@+id/tvForgotPass" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_19sdp"
+        android:background="@drawable/bg_edittext"
+        android:hint="@string/hint_email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:maxLength="@integer/email_max"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/_11sdp"
+        android:singleLine="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tvPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_42sdp"
+        android:background="@drawable/bg_blackdim_outline_graydim_corner_14"
+        android:hint="@string/Please_enter_code"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword|textCapCharacters"
+        android:maxLength="@integer/pass_max"
+        android:maxLines="1"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_11sdp"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/_91sdp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:srcCompat="@drawable/ic_app_logo" />
+
+    <ImageView
+        android:id="@+id/ivPaswrdVisibility"
+        android:layout_width="@dimen/_19sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:contentDescription="@string/img_desc"
+        android:padding="@dimen/_3sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintTop_toTopOf="@id/etPassword"
+        app:srcCompat="@drawable/selector_paswrd_visibility"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@id/cbRememberMe"
+        app:layout_constraintTop_toBottomOf="@+id/cbRememberMe">
+
+        <CheckBox
+            android:id="@+id/cbPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_bg"
+            android:checked="false"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingEnd="@dimen/_6sdp"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/terms_and_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/by_creating_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin">
+
+        <TextView
+            android:id="@+id/tvNotAMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/not_a_member"
+            android:textColor="@color/textGrayLight"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:foreground="@drawable/ripple_box"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/sign_up"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_11ssp"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/light_blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
+        app:layout_constraintEnd_toEndOf="@+id/ivLogo"
+        app:layout_constraintStart_toStartOf="@+id/ivLogo"
+        app:layout_constraintTop_toTopOf="@+id/ivLogo"
+        tools:ignore="UnusedAttribute" />
+    <!-- android:text="Zlg0DJa4"-->
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/sign_in"
+        android:textAllCaps="true"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_17ssp"
+        app:layout_constraintEnd_toEndOf="@id/ivLogo"
+        app:layout_constraintStart_toStartOf="@id/ivLogo"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/email"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail" />
+
+    <TextView
+        android:id="@+id/tv_sign_in_to_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/please_sign_in_to_continue"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="@id/tvSignIn"
+        app:layout_constraintStart_toStartOf="@id/tvSignIn"
+        app:layout_constraintTop_toBottomOf="@id/tvSignIn" />
+
+    <!-- <CheckBox
+         android:id="@+id/cbPrivacyPolicy"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:button="@drawable/checkbox_bg"
+         android:checked="false"
+         android:paddingHorizontal="@dimen/_6sdp"
+         android:paddingVertical="@dimen/_6sdp"
+         android:layout_marginTop="@dimen/_4sdp"
+         android:fontFamily="@font/poppins_medium"
+         android:text="@string/by_creating_account"
+         android:textColor="@color/textWhite"
+         android:textSize="@dimen/_10ssp"
+         app:layout_constraintStart_toStartOf="@id/cbRememberMe"
+         app:layout_constraintTop_toBottomOf="@+id/cbRememberMe" />-->
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_49sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/enter_your_membership_code"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_in_to_continue" />
+
+    <TextView
+        android:id="@+id/tvRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/remember_me"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@+id/cbRememberMe"
+        app:layout_constraintTop_toTopOf="@+id/cbRememberMe" />
+
+    <TextView
+        android:id="@+id/tvForgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:foreground="@drawable/ripple_box"
+        android:padding="@dimen/_3sdp"
+        android:text="@string/forgot_pass"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:contentDescription="@string/app_name"
+            android:foreground="@drawable/ripple_box"
+            android:padding="@dimen/_4sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow_white"
+            tools:ignore="UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

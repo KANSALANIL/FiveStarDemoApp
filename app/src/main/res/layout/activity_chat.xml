@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.ChatActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:background="@color/grayDarker"
+        android:paddingStart="@dimen/_17sdp"
+        android:paddingEnd="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--  android:foreground="@drawable/ripple_box"-->
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow_white"
+            tools:ignore="UnusedAttribute" />
+
+        <ProgressBar
+            android:id="@+id/pbChatProfile"
+            style="?android:attr/indeterminateProgressStyle"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:elevation="@dimen/_2sdp"
+            android:indeterminateTint="@color/light_blue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfileImage"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfileImage"
+            app:layout_constraintStart_toStartOf="@+id/ivProfileImage"
+            app:layout_constraintTop_toTopOf="@+id/ivProfileImage" />
+
+        <TextView
+            android:id="@+id/tvChatTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/ic_user_placeholder"
+            android:contentDescription="@string/img_desc"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="@id/ivBack"
+            app:riv_corner_radius="@dimen/_56sdp"
+            tools:ignore="UnusedAttribute"
+            tools:src="@drawable/ic_user_placeholder" />
+
+        <!-- android:foreground="@drawable/ripple_box" -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pbLoadMore"
+        style="?android:attr/indeterminateProgressStyle"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:elevation="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:indeterminateTint="@color/light_blue"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/clToolbar"
+        app:layout_constraintStart_toStartOf="@+id/clToolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/clAudio"
+        app:layout_constraintTop_toBottomOf="@+id/pbLoadMore"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_chat" />
+
+
+
+    <TextView
+        android:id="@+id/tvNoDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_found"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_15ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rvChatList"
+        app:layout_constraintEnd_toEndOf="@+id/rvChatList"
+        app:layout_constraintStart_toStartOf="@+id/rvChatList"
+        app:layout_constraintTop_toTopOf="@+id/rvChatList" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_11sdp"
+        android:background="@color/grayDarker"
+        android:paddingStart="@dimen/_17sdp"
+        android:paddingEnd="@dimen/_17sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSendMessage"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:contentDescription="@string/img_desc"
+            android:foreground="@drawable/ripple_round"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:riv_corner_radius="@dimen/_56sdp"
+            app:srcCompat="@drawable/ic_send_message"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/bg_black_dark_corner_7"
+            android:paddingHorizontal="@dimen/_9sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivSendMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivEmoji"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_emoji"
+                tools:ignore="UnusedAttribute" />
+
+            <!-- android:layout_marginStart="@dimen/_11sdp"-->
+            <ImageView
+                android:id="@+id/ivAttachFile"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_11sdp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivCamera"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_attach_file"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_camara"
+                tools:ignore="UnusedAttribute" />
+
+            <EditText
+                android:id="@+id/edTypeMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:clickable="true"
+                android:scrollbars="vertical"
+                android:maxLines="12"
+                android:imeOptions="actionNone"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/type_a_message"
+                android:inputType="textCapSentences|textMultiLine"
+                android:textColor="@color/textWhite"
+                android:textColorHint="@color/hint_gray_color"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivAttachFile"
+                app:layout_constraintStart_toEndOf="@+id/ivEmoji"
+                app:layout_constraintTop_toTopOf="parent"
+                android:focusable="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- android:foreground="@drawable/ripple_box" -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <com.google.android.exoplayer2.ui.PlayerView
+      android:visibility="gone"
+      android:id="@+id/chatAudioPlayerView"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_70sdp"
+      android:keepScreenOn="true"
+      app:controller_layout_id="@layout/layout_home_mini_player"
+      app:hide_on_touch="false"
+      app:layout_constraintTop_toBottomOf="@+id/clSendMessage"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:resize_mode="fit"
+      app:show_buffering="never"
+      app:show_timeout="0"
+      app:use_artwork="false" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

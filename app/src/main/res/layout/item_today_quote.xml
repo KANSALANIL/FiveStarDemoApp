@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvQuote"
+    android:layout_width="@dimen/_222sdp"
+    android:layout_height="@dimen/_263sdp"
+    android:elevation="@dimen/_8sdp"
+    android:outlineSpotShadowColor="@color/white"
+    android:layout_marginHorizontal="@dimen/_3sdp"
+    android:layout_marginVertical="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_14sdp">
+    <!-- android:background="@drawable/box_white_corner_14"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clQuoteRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivQuoteImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivTextQuote"
+            android:layout_width="@dimen/_81sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_orange_qoute"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_34sdp"
+            android:layout_marginStart="@dimen/_21sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ProgressBar
+            android:id="@+id/pbQuoteImage"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:indeterminateTint="@color/light_blue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivQuoteImage"
+            app:layout_constraintEnd_toEndOf="@+id/ivQuoteImage"
+            app:layout_constraintStart_toStartOf="@+id/ivQuoteImage"
+            app:layout_constraintTop_toTopOf="@+id/ivQuoteImage" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:contentDescription="@string/img_desc"
+                android:elevation="@dimen/_2sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/tvQuoteName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvQuoteName"
+                app:srcCompat="@drawable/ic_quote_stars" />
+
+            <TextView
+                android:id="@+id/tvQuoteName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="SAM Rana" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clQuoteText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_28sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tvQuoteName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvQuoteStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_start_quote"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--
+                    android:autoSizeTextType="uniform"
+                -->
+                <TextView
+                    android:id="@+id/tvQuote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="fill"
+                    android:clipToPadding="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:visibility="visible"
+                    tools:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Right Alligne text is added in this quote" />
+
+
+                <!-- android:justificationMode="inter_word"-->
+
+                <TextView
+                    android:id="@+id/tvQuoteEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_end_quote"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvQuote"
+                    app:layout_constraintEnd_toEndOf="@+id/tvQuote" />
+
+                <!--android:autoSizeTextType="uniform"-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

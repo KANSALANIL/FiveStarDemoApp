@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/box_black_dim_corner_28" android:state_selected="false" />
+    <item android:drawable="@drawable/box_black_dim_outline_blue_corner_28" android:state_selected="true" />
+
+</selector>

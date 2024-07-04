@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_13sdp"
+    android:layout_marginTop="@dimen/_11sdp"
+    android:layout_marginEnd="@dimen/_13sdp">
+
+    <ProgressBar
+        android:id="@+id/progressBarMyPrograms"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProgram"
+        app:layout_constraintEnd_toEndOf="@+id/ivProgram"
+        app:layout_constraintStart_toStartOf="@+id/ivProgram"
+        app:layout_constraintTop_toTopOf="@+id/ivProgram" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivProgram"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toStartOf="@id/ivHeart"
+        app:layout_constraintStart_toEndOf="@id/ivProgram"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ivHeart"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:contentDescription="@string/img_desc"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selector_favorite" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:textColor="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toEndOf="@+id/ivProgram"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="32 Min" />
+
+    <View
+        android:id="@+id/viewCenter"
+        android:layout_width="@dimen/divider_thin"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:background="@color/grayMedium"
+        app:layout_constraintBottom_toBottomOf="@id/tvTime"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        app:layout_constraintTop_toTopOf="@id/tvTime" />
+
+    <ProgressBar
+        android:id="@+id/pbProgram"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:max="10"
+        android:progress="6"
+        android:progressDrawable="@drawable/drawable_progress_bar_blue"
+        app:layout_constraintBottom_toBottomOf="@id/ivProgram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivProgram" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_thin"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:background="@color/grayBorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProgram" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

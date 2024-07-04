@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".mvp.activity.BookmarksAllCategory">
+<include layout="@layout/layout_toolbar"
+    android:id="@+id/clToolbar"/>
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:background="@color/grayDarker"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        &lt;!&ndash;  android:foreground="@drawable/ripple_box"&ndash;&gt;
+        <ImageView
+            android:id="@+id/ivBackBookMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_right_arrow"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_17ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBackBookMark"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/book_marks" />
+
+
+        &lt;!&ndash; android:foreground="@drawable/ripple_box" &ndash;&gt;
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/allBookmarkMiniPlayer"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBookmarkRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_17sdp"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clvideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tvBookmarkVideos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    tools:text="@string/videos"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllVideos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/see_all_"
+                    android:textColor="@color/gray_text_time"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookmarksVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBookmarkVideos"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_bookmarks_all_category" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAudio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clvideo">
+
+
+                <TextView
+                    android:id="@+id/tvBookmarkAudio"
+                    android:layout_width="62dp"
+                    android:layout_height="33dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    tools:text="@string/audio"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/see_all_"
+                    android:textColor="@color/gray_text_time"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookmarkAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSeeAllAudio"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_bookmarks_all_category" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/clBookmarksMindVenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clAudio">
+
+
+                <TextView
+                    android:id="@+id/tvBookmarkMindVenom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    tools:text="@string/mind_venom"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllMindVenom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/see_all_"
+                    android:textColor="@color/gray_text_time"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookmarkMindVenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSeeAllMindVenom"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_bookmarks_all_category" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMindVenom2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clBookmarksMindVenom">
+
+
+                <TextView
+                    android:id="@+id/tvMindVenomSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    tools:text="@string/mind_venom"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllMindVenom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/see_all_"
+                    android:textColor="@color/gray_text_time"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookmarkMindVenomSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSeeAllMindVenom2"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_bookmarks_all_category" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookmarkAllCategory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_7sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/allBookmarkMiniPlayer"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_bookmarks_section" />
+
+    <TextView
+        android:id="@+id/tvBookmarkNoDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/no_data_found"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/allBookmarkMiniPlayer"
+        android:layout_width="match_parent"
+        app:controller_layout_id="@layout/layout_home_mini_player"
+        android:layout_height="@dimen/_70sdp"
+        android:keepScreenOn="true"
+        app:show_timeout="0"
+        app:use_artwork="false"
+        app:hide_on_touch="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvBookmarkAllCategory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:resize_mode="fit"
+        app:show_buffering="never"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

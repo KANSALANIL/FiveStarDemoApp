@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.FilterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/filterMiniPlayer"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_28sdp">
+
+                    <TextView
+                        android:id="@+id/tvSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginEnd="@dimen/_35sdp"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textWhite"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clWheelView"
+                        tools:text="@string/believe" />
+
+                    <!--<com.skyhope.showmoretextview.ShowMoreTextView-->
+                    <TextView
+                        android:id="@+id/tvDiscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_17sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/textWhite"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+                        tools:ignore="UnusedAttribute"
+                        tools:text="But surely" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clWheelView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivWheel"
+                            android:layout_width="@dimen/_211sdp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/img_wheel1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvTagTwo"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_59sdp"
+                            android:elevation="@dimen/_5sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:maxLength="12"
+                            android:rotation="269"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text_"
+                            android:textSize="@dimen/_11sdp"
+                            app:layout_constraintStart_toEndOf="@+id/tvTagOne"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTagOne"
+                            tools:text="Awareness" />
+
+                        <TextView
+                            android:id="@+id/tvTagOne"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text_"
+                            android:textSize="@dimen/_11sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Believe" />
+
+                        <TextView
+                            android:id="@+id/tvTagThree"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_45sdp"
+                            android:layout_marginEnd="@dimen/_29sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:rotation="-40"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text_"
+                            android:textSize="@dimen/_11sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/tvTagTwo"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTagTwo"
+                            tools:text="Kaizen" />
+
+                        <TextView
+                            android:id="@+id/tvTagFourth"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_103sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:rotation="42"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text_"
+                            android:textSize="@dimen/_11sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvTagThree"
+                            app:layout_constraintEnd_toEndOf="@+id/tvTagThree"
+                            app:layout_constraintTop_toTopOf="@+id/tvTagThree"
+                            tools:text="Discipline" />
+
+                        <TextView
+                            android:id="@+id/tvTagFiveth"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:layout_marginBottom="@dimen/_189sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:rotation="-64"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text_"
+                            android:textSize="@dimen/_11sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvTagFourth"
+                            app:layout_constraintEnd_toEndOf="@+id/tvTagFourth"
+                            app:layout_constraintTop_toTopOf="@+id/tvTagFourth"
+                            tools:text="Composure" />
+
+                        <me.sujanpoudel.wheelview.WheelView
+                            android:id="@+id/wheelView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:wheelAnchorAngle="270"
+                            app:wheelAnimationDuration="800"
+                            app:wheelArcBackgroundColor="#F7F8FB"
+                            app:wheelCenterIcon="@drawable/ic_home"
+                            app:wheelCenterIconPadding="16dp"
+                            app:wheelCenterIconTint="@color/dark_brownish_red"
+                            app:wheelDividerStrokeWidth="5dp"
+                            app:wheelMode="ANIMATE_TO_ANCHOR"
+                            app:wheelSelectedArcBackgroundColor="@color/brownish_light"
+                            app:wheelSelectedTextColor="@color/dark_brownish_red"
+                            app:wheelStartAngle="315"
+                            app:wheelTextColor="@color/gray_text_"
+                            app:wheelTextSize="@dimen/_11sdp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_28sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDiscription">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_17sdp"
+                            android:layout_marginTop="@dimen/_26sdp"
+                            app:cardBackgroundColor="@color/grayDarker"
+                            app:cardCornerRadius="@dimen/_7sdp"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvFilterCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingVertical="@dimen/_7sdp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_filter_category" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/filterMiniPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:keepScreenOn="true"
+            app:controller_layout_id="@layout/layout_home_mini_player"
+            app:hide_on_touch="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clScroll"
+            app:resize_mode="fit"
+            app:show_buffering="never"
+            app:show_timeout="0"
+            app:use_artwork="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

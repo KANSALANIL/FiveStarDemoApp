@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_17sdp"
+    android:layout_marginTop="@dimen/_7sdp"
+    android:layout_marginBottom="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_17sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivFavProgram"
+        android:layout_width="@dimen/_71sdp"
+        android:layout_height="@dimen/_71sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:foreground="@color/blackTransparent70"
+        tools:src="@drawable/dummy_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_7sdp" />
+
+    <ImageView
+        android:id="@+id/ivPlayVideo"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintBottom_toBottomOf="@id/ivFavProgram"
+        app:layout_constraintEnd_toEndOf="@id/ivFavProgram"
+        app:layout_constraintStart_toStartOf="@id/ivFavProgram"
+        app:layout_constraintTop_toTopOf="@id/ivFavProgram"
+        app:srcCompat="@drawable/ic_pause"
+        tools:ignore="UnusedAttribute" />
+
+    <ProgressBar
+        android:id="@+id/pbImage"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFavProgram"
+        app:layout_constraintEnd_toEndOf="@+id/ivFavProgram"
+        app:layout_constraintStart_toStartOf="@+id/ivFavProgram"
+        app:layout_constraintTop_toTopOf="@+id/ivFavProgram" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="@+id/ivFavProgram"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFavProgram"
+        app:layout_constraintStart_toEndOf="@+id/ivFavProgram"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvFavProgramName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:lines="2"
+            android:includeFontPadding="false"
+            android:text="Mike Tyson Mike Tyson Mike Tyson"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clBookmarks"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivMaster"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:padding="@dimen/_4sdp"
+            android:contentDescription="@string/img_desc"
+            android:foreground="@drawable/ripple_box"
+            app:layout_constraintEnd_toStartOf="@id/clBookmarks"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/selector_mastered"
+            tools:ignore="UnusedAttribute" />
+<!--            android:foreground="@drawable/ripple_box"
+-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBookmarks"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_28sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBookMark"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:contentDescription="@string/img_desc"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/selector_favorite"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvDiscription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lines="2"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/textWhiteTransparent50"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintStart_toStartOf="@+id/tvFavProgramName"
+            app:layout_constraintEnd_toStartOf="@id/tvTimeDuration"
+            app:layout_constraintTop_toBottomOf="@id/tvFavProgramName"
+            tools:text="A Champions determination,should underestimated never be underestimated should never be underestimated" />
+
+        <TextView
+            android:id="@+id/tvTimeDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/textWhiteTransparent50"
+            android:textSize="@dimen/_7ssp"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:background="@drawable/box_black_dim_corner_28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvDiscription"
+            tools:text="00 : 02 : 30" />
+
+        <ProgressBar
+            android:id="@+id/pbProgram"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            tools:progress="35"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:progressDrawable="@drawable/drawable_progress_bar_blue"
+            app:layout_constraintTop_toBottomOf="@id/tvDiscription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@drawable/line"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivFavProgram"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

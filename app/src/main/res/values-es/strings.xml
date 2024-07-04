@@ -1,0 +1,308 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Mente Cinco Estrellas</string>
+    <string name="five_star_mind">mente_cinco_estrellas</string>
+
+    <string name="check_your_network_connection">Por favor, verifica tu conexión a Internet. Asegúrate de que esté funcionando correctamente.</string>
+    <string name="view_all">Ver Todo</string>
+    <string name="no_data_found">No se encontraron datos</string>
+    <string name="please_wait">Por favor, espera</string>
+    <string name="img_desc">Descripción de la Imagen</string>
+    <string name="are_sure_you_want_to_logout">¿Estás seguro/a de que deseas cerrar sesión?</string>
+    <string name="send_msg">Enviaremos un mensaje de texto con la contraseña</string>
+    <string name="no_journals_available">No hay diarios disponibles</string>
+    <string name="no_transactions_available">No hay transacciones disponibles</string>
+    <string name="blank_string">""</string>
+    <string name="error_occurred">Ha ocurrido un error</string>
+    <string name="empty_list">Lista vacía</string>
+    <string name="unable_to_process_video">No es posible procesar este video. Por favor, inténtalo nuevamente.</string>
+    <string name="please_select_image_resource">Por favor, selecciona una fuente de imagen</string>
+    <string name="length_of_phone_number">El número de teléfono debe tener 10 caracteres</string>
+    <string name="one_step_in_your_journey">Un paso en tu Viaje Recuerda.</string>
+    <string name="upload_photo_or_video">Sube una Foto o Video</string>
+    <string name="please_upload_your_image">Por favor, sube tu Imagen</string>
+    <string name="please_enter_valid_pass">Por favor, ingresa una contraseña válida</string>
+    <string name="please_enter_valid_card_number">Por favor, ingresa un número de tarjeta válido</string>
+    <string name="pass_is_too_long">La contraseña es demasiado larga</string>
+    <string name="empty_cart_holder">Por favor, ingresa el nombre del titular de la tarjeta</string>
+    <string name="empty_cart_number">Por favor, ingresa el número de tarjeta</string>
+    <string name="empty_expiry_date">Por favor, ingresa la fecha de vencimiento</string>
+    <string name="empty_cvv_no">Por favor, ingresa el número CVV</string>
+    <string name="validate_cvv">Por favor, ingresa un código CVV válido</string>
+    <string name="empty_cart_msg">Tu lista de carrito está vacía</string>
+    <string name="empty_coupon_msg">Por favor, ingresa el código del cupón</string>
+    <string name="no_memberships_msg">No hay membresías disponibles</string>
+    <string name="pls_select_membership">Por favor, selecciona una membresía</string>
+    <string name="pls_wait_video_is_uploading">Por favor, espera mientras se carga el video</string>
+    <string name="access_permission_msg">Estos permisos son necesarios para la aplicación</string>
+    <string name="pass_is_match_with_old">La contraseña antigua y la nueva no deben ser iguales</string>
+    <string name="confirm_pass_is_not_match_with_new">La contraseña de confirmación debe ser igual a la nueva contraseña</string>
+    <string name="accept_terms_conditions">Por favor, acepta los Términos y Condiciones</string>
+    <string name="mastered_description">¿Sientes que has dominado esto?</string>
+    <string name="team_membership_desc">¿Cuántos miembros tienes en tu equipo?</string>
+    <string name="you_have_canceled_your_subscription_for_auto_renewal">Has cancelado tu suscripción para la renovación automática.</string>
+    <string name="your_current_membership_has_not_expired_yet">Tu membresía actual aún no ha expirado.</string>
+    <string name="please_purchase_product_to_watch_video">Por favor, compra este producto para ver el video.</string>
+    <string name="please_upgrade_membership_to_watch_this_video">Por favor, actualiza tu membresía para ver este video.</string>
+    <string name="you_now_have_access_to_all_videos">¡Felicitaciones! Ahora tienes acceso a todos los videos.</string>
+    <string name="are_you_sure_you_want_to_remove_from_bookmark">¿Estás seguro/a de que deseas eliminar de los marcadores?</string>
+    <string name="are_you_sure_you_want_to_add_bookmark">¿Estás seguro/a de que deseas agregar a los marcadores?</string>
+
+
+    <string name="hint_email">jack55@gmail.com</string>
+    <string name="hint_pass">*********</string>
+    <string name="hint_number">+1 222 555 6666</string>
+    <string name="hint_name">Jack</string>
+    <string name="hint_cvv">***</string>
+    <string name="hint_date_cart">08/2022</string>
+    <string name="hint_cart_no">1223–1511–5666-5555</string>
+    <string name="hint_full_name">Jack Smith</string>
+    <string name="hint_promo_code">Ingresar código de promoción</string>
+    <string name="hint_date">DD-MM-AAAA</string>
+    <string name="hint_note">texto&#8230;</string>
+    <string name="hint_title">Texto</string>
+    <string name="hint_text">texto…</string>
+    <string name="hint_type_here">Escribe aquí...</string>
+    <string name="hint_enter_training_days">Ingresar días de entrenamiento</string>
+    <string name="hint_enter_focus">Ingresar enfoque</string>
+    <string name="hint_enter_goal">Ingresar objetivo</string>
+    <string name="hint_enter_hours_trained">Ingresar horas entrenadas</string>
+    <string name="hint_enter_highlights">Ingresar aspectos destacados</string>
+    <string name="hint_enter_self_report">Ingresar autoinforme</string>
+    <string name="hint_enter_game_days">Ingresar días de juego</string>
+    <string name="hint_enter_minutes_played">Ingresar minutos jugados</string>
+    <string name="hint_college">CGC</string>
+    <string name="hint_state">Texas</string>
+    <string name="hint_referral_code">1536964</string>
+
+    <string name="cancel">Cancelar</string>
+    <string name="choose_photo">Elegir Foto</string>
+    <string name="choose_video">Elegir Video</string>
+    <string name="take_video">Grabar Video</string>
+    <string name="take_photo">Tomar Foto</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="submit">Enviar</string>
+    <string name="ok">Aceptar</string>
+    <string name="save">Guardar</string>
+    <string name="mastered">Dominado</string>
+    <string name="subscribe">Suscribirse</string>
+    <string name="buy">Comprar</string>
+    <string name="add_to_cart">Agregar al Carrito</string>
+    <string name="purchased">Comprado</string>
+    <string name="view_cart">Ver Carrito</string>
+    <string name="upgrade">Actualizar</string>
+
+    <string name="required">Requerido</string>
+    <string name="invalid_format">Inválido</string>
+    <string name="new_videos">Nuevos Videos</string>
+    <string name="accept_conditions">Acepta nuestros&#160;</string>
+    <string name="terms_conditions">Términos y Condiciones</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="lets_go">¡Vamos!</string>
+    <string name="name">Nombre</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="phone_number">Número de Teléfono</string>
+    <string name="password">Contraseña</string>
+    <string name="old_password">Contraseña Antigua</string>
+    <string name="new_password">Contraseña Nueva</string>
+    <string name="confirm_password">Confirmar Contraseña Nueva</string>
+    <string name="remember_me">Recordarme</string>
+    <string name="forgot_pass">¿Olvidaste la Contraseña?</string>
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="not_a_member">¿No eres miembro?</string>
+    <string name="register">Registrarse</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="my_account">Mi Cuenta</string>
+    <string name="programs">Programas</string>
+    <string name="memberships">Membresías</string>
+    <string name="faq">Preguntas Frecuentes</string>
+    <string name="suggestions">Sugerencias</string>
+    <string name="journal">Diario</string>
+    <string name="evaluation">Evaluación</string>
+    <string name="privacy_policy">Política de Privacidad</string>
+    <string name="terms_and_conditions">Términos y Condiciones</string>
+    <string name="contact_us">Contáctanos</string>
+    <string name="forgot_password">Olvidé la Contraseña</string>
+    <string name="profile">Mi Perfil</string>
+    <string name="my_programs">Mis Programas</string>
+    <string name="my_memberships">Mis Membresías</string>
+    <string name="my_favorite">Mis Marcadores</string>
+    <string name="transactions">Transacciones</string>
+    <string name="cart">Carrito</string>
+    <string name="add_journal">Agregar Diario</string>
+    <string name="change_password">Cambiar Contraseña</string>
+    <string name="settings">Configuración</string>
+    <string name="email_notifications">Notificaciones por Correo</string>
+    <string name="push_notifications">Notificaciones Push</string>
+    <string name="title_suggestion">Sugerencias</string>
+    <string name="title_contact_us">Contáctanos</string>
+    <string name="date">Fecha:</string>
+    <string name="note">Nota</string>
+    <string name="journal_pics_and_videos">Fotos y Videos del Diario</string>
+    <string name="skill">Habilidad</string>
+    <string name="tactical">Táctica</string>
+    <string name="intensity">Intensidad</string>
+    <string name="status">Estado:</string>
+    <string name="payment_type">Tipo de Pago:</string>
+    <string name="my_program">Mis Programas</string>
+    <string name="cart_detail">Detalle de la Tarjeta</string>
+    <string name="name_on_card">Nombre en la tarjeta:</string>
+    <string name="card_number">Número de Tarjeta:</string>
+    <string name="expiry_date">Fecha de Vencimiento:</string>
+    <string name="cvv_code">Código CVV:</string>
+    <string name="invalid_coupon_code">Código de cupón inválido.</string>
+    <string name="apply">Aplicar</string>
+    <string name="coupon">Cupón Aplicado</string>
+    <string name="checkout">Pagar</string>
+    <string name="payment">Detalles de Pago</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="discount">Código de Descuento:</string>
+    <string name="total">Total</string>
+    <string name="start_date">Fecha de Inicio</string>
+    <string name="end_date">Fecha de Finalización</string>
+    <string name="change_subscription">Cambiar suscripción</string>
+    <string name="cancel_subscription">Cancelar Suscripción</string>
+    <string name="still_to_implement">Aún por Implementar</string>
+    <string name="text_description">Descripción</string>
+    <string name="title_text">Título:</string>
+    <string name="title_subject">Asunto</string>
+    <string name="price">$20.0</string>
+    <string name="phase_zero">Fase 0</string>
+    <string name="with_phase">con_fase</string>
+    <string name="without_phase">sin_fase</string>
+    <string name="type_pdf">pdf</string>
+    <string name="type_video">video</string>
+    <string name="detail">Detalles</string>
+    <string name="movement">movimiento</string>
+    <string name="image">imagen</string>
+    <string name="individual">Individual</string>
+    <string name="individual_subscription">Suscripción Individual</string>
+    <string name="team">Equipo</string>
+    <string name="club">Club</string>
+    <string name="desc_service">Es importante para cargar el contenido de la aplicación</string>
+    <string name="one_month">1 mes</string>
+    <string name="three_months">3 meses</string>
+    <string name="six_months">6 meses</string>
+    <string name="twelve_months">12 Meses</string>
+    <string name="five_codes">5 Códigos</string>
+    <string name="ten_codes">10 Códigos</string>
+    <string name="fifteen_codes">15 Códigos</string>
+    <string name="twenty_codes">20 Códigos</string>
+    <string name="hundred_codes">100 Códigos</string>
+
+    <string name="individual_">INDIVIDUAL</string>
+    <string name="team_">EQUIPO</string>
+    <string name="club_">CLUB</string>
+    <string name="stripe">STRIPE</string>
+    <string name="for_six_months">Por 6 meses</string>
+    <string name="for_twelve_months">Por 12 meses</string>
+    <string name="no_membership_yet">Aún no hay Membresías</string>
+    <string name="self_assessment">Autoevaluación</string>
+    <string name="design">Diseño</string>
+    <string name="develop">Desarrollo</string>
+    <string name="display">Visualización</string>
+    <string name="whats_your_plan_">¿Cuál es tu Plan?</string>
+    <string name="training_days">Días de Entrenamiento</string>
+    <string name="self_report">Autoinforme</string>
+    <string name="minutes_played">Minutos Jugados</string>
+    <string name="game_days">Días de Juego</string>
+    <string name="performance_">¿Rendimiento?</string>
+    <string name="highlights">Aspectos Destacados</string>
+    <string name="hours_trained">Horas Entrenadas</string>
+    <string name="did_you_train_">¿Entrenaste?</string>
+    <string name="goal">Objetivo</string>
+    <string name="focus">Enfoque</string>
+    <string name="club_college_">Club/Colegio:</string>
+    <string name="state_">Estado:</string>
+    <string name="referral_code">Código de Referencia (Opcional)</string>
+    <string name="home">Inicio</string>
+    <string name="win_your">Gana tu</string>
+    <string name="train_play_live">ENTRENA JUEGA VIVE</string>
+    <string name="summer">Verano</string>
+    <string name="membership">MEMBRESÍA</string>
+    <string name="view_detail">Ver Detalle</string>
+
+    <string name="zero">0</string>
+    <string name="two_fifty">$250</string>
+    <string name="price_fifty">$50</string>
+    <string name="price_hundred">$100</string>
+    <string name="price_one_fifty">$150</string>
+    <string name="price_two_hundred">$200</string>
+    <string name="five_hundred">$500</string>
+
+
+    <string name="format_video"><xliff:g id="view">%1$s</xliff:g> Video</string>
+    <string name="format_videos"><xliff:g id="view">%1$s</xliff:g> Videos</string>
+    <string name="format_pdf"><xliff:g id="view">%1$s</xliff:g> PDFs</string>
+
+    <string name="format_video_pdf"><xliff:g id="view">%1$s</xliff:g> &#160;&#160;&#160; | &#160;&#160;&#160;<xliff:g id="view">%2$s</xliff:g></string>
+
+    <string name="format_price_discount_on_code">Descuento <xliff:g>%1$s</xliff:g>%%</string>
+    <string name="format_price_discount"><xliff:g>%1$s</xliff:g>Cupón</string>
+    <string name="format_price">$<xliff:g id="view">%1$s</xliff:g></string>
+
+    <string name="format_team_members">Para <xliff:g id="view">%1$s</xliff:g> Miembros del Equipo</string>
+    <string name="format_codes"><xliff:g id="view">%1$s</xliff:g> Códigos</string>
+    <string name="format_for">Para <xliff:g id="view">%1$s</xliff:g></string>
+    <string name="format_parentheses">(<xliff:g id="view">%1$s</xliff:g>)</string>
+    <string name="format_page_count"><xliff:g>%1$d</xliff:g>/<xliff:g>%2$d</xliff:g></string>
+    <string name="format_see_all_count"><xliff:g>%1$s</xliff:g>(<xliff:g>%2$d</xliff:g>)</string>
+    <string name="format_notification_time"><xliff:g>%1$s</xliff:g> <xliff:g>%2$s</xliff:g></string>
+
+    <string name="format_individual_membership_description_for_months">Tu suscripción se renovará automáticamente al final de <xliff:g id="view">%1$s</xliff:g> meses y se cargará tu método de pago para el próximo período de suscripción. Si deseas cancelar la renovación automática de tu suscripción para el siguiente período de suscripción, debes cancelar tu plan a través de tu página de cuenta o a través de la tienda de aplicaciones que utilizaste para la compra al menos un (1) día antes del final de tu período de suscripción actual.</string>
+    <string name="format_individual_membership_description_for_month">Tu suscripción se renovará automáticamente al final de <xliff:g id="view">%1$s</xliff:g> mes y se cargará tu método de pago para el próximo período de suscripción. Si deseas cancelar la renovación automática de tu suscripción para el siguiente período de suscripción, debes cancelar tu plan a través de tu página de cuenta o a través de la tienda de aplicaciones que utilizaste para la compra al menos un (1) día antes del final de tu período de suscripción actual.</string>
+    <string name="delete_account">Eliminar Cuenta</string>
+    <string name="go_back">Volver</string>
+    <string name="you_have_selected_to_delete_your_account">Has seleccionado eliminar tu cuenta. Hacer clic en SÍ eliminará tu cuenta permanentemente. ¡Esta acción es irreversible!</string>
+
+    <string name="please_sign_in_to_continue">Por favor, inicia sesión para continuar</string>
+    <string name="sign_in">Iniciar Sesión</string>
+    <string name="create_account">Crear Cuenta</string>
+    <string name="just_a_few_questions">Solo unas pocas preguntas</string>
+    <string name="what_is_your_skill_level">¿Cuál es tu nivel de habilidad?</string>
+    <string name="which_position_do_you_play">¿En qué posición juegas?</string>
+    <string name="how_many_days_a_week">¿Cuántos días a la semana entrenas (Equipo e Individual)?</string>
+    <string name="hint_select_level">Selecciona Nivel</string>
+    <string name="hint_select_position">Selecciona Posición</string>
+    <string name="hint_select_amount_of_days">Selecciona cantidad de Días</string>
+    <string name="for_you">Para Ti</string>
+    <string name="videos">Videos</string>
+    <string name="language">Idioma</string>
+    <string name="english">Inglés</string>
+    <string name="spanish">Español</string>
+    <string name="japanese">Japonés</string>
+    <string name="contact_center">Centro de Contacto</string>
+    <string name="bookmarks">Marcadores</string>
+    <string name="bookmark_title">MARCADOR</string>
+
+    <string name="enter_your_membership_code">Ingresa tu Código de Membresía</string>
+    <string name="search_for_a_coach">Buscar un entrenador</string>
+    <string name="coaching_staff">Personal de Entrenamiento</string>
+    <string name="contact_center_cap">CENTRO DE CONTACTO</string>
+    <string name="new_">Nuevo</string>
+    <string name="Please_enter_code">Por favor, ingresa el código</string>
+    <string name="meditation">MEDITACIÓN</string>
+    <string name="visulisation">VISUALIZACIÓN</string>
+    <string name="relaxation">RELAXACIÓN</string>
+    <string name="see_all">Ver Todo (2)</string>
+    <string name="mental_performance_manual">Manual de Rendimiento Mental</string>
+    <string name="email_address">Dirección de correo electrónico</string>
+    <string name="audio_cap">AUDIO</string>
+    <string name="video_cap">VIDEO</string>
+    <string name="mental_minutes">MINUTOS MENTALES</string>
+    <string name="book_mark">MARCAR</string>
+    <string name="pdf_titel">PDF</string>
+    <string name="mind_venom">Veneno Mental</string>
+    <string name="add_bookmark">Agregar</string>
+    <string name="remove_bookmark">Eliminar</string>
+    <string name="value_zero">0</string>
+    <string name="total_app_view">Total Min en la Aplicación</string>
+    <string name="videos_viewed">Videos Vistos</string>
+    <string name="audios_viewed">Audios Vistos</string>
+    <string name="performance_this_month">RENDIMIENTO ESTE MES</string>
+    <string name="player">Jugador</string>
+    <string name="by_creating_account"><font fgcolor='#FFFFFF'>Acepto los </font> <font fgcolor='#B71137'>Términos y Condiciones</font> y la <font fgcolor='#B71137'>Política de Privacidad.</font></string>
+
+
+</resources>

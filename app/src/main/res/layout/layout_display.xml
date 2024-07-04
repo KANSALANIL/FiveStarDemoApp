@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clRootDevelop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvPerformance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold_700"
+            android:text="@string/performance_"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGameDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/urbanist_medium_500"
+            android:text="@string/game_days"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPerformance" />
+
+        <EditText
+            android:id="@+id/etGameDays"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/hint_enter_game_days"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="@integer/hours_max"
+            android:paddingBottom="@dimen/_11sdp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDays" />
+
+        <TextView
+            android:id="@+id/tvMinutesPlayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/urbanist_medium_500"
+            android:text="@string/minutes_played"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etGameDays" />
+
+        <EditText
+            android:id="@+id/etMinutesPlayed"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="top"
+            android:hint="@string/hint_enter_minutes_played"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="@integer/hours_max"
+            android:paddingBottom="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMinutesPlayed" />
+
+        <TextView
+            android:id="@+id/tvSelfReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/urbanist_medium_500"
+            android:text="@string/self_report"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etMinutesPlayed" />
+
+        <EditText
+            android:id="@+id/etDisplaySelfReport"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_78sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="top"
+            android:hint="@string/hint_enter_self_report"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="@integer/goal_max"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:paddingBottom="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelfReport" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

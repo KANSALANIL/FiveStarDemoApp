@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_63sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_9sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_blackdim_outline_graydim_corner_14">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivUserProfile"
+        android:layout_width="@dimen/_49sdp"
+        android:layout_height="@dimen/_49sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dummy_coach_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:riv_oval="true" />
+
+
+    <ProgressBar
+        android:id="@+id/pbUserImage"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserProfile"
+        app:layout_constraintEnd_toEndOf="@+id/ivUserProfile"
+        app:layout_constraintStart_toStartOf="@+id/ivUserProfile"
+        app:layout_constraintTop_toTopOf="@+id/ivUserProfile" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivUserProfile"
+        app:layout_constraintTop_toTopOf="@id/ivUserProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserProfile">
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Torey Lovullo"
+        android:includeFontPadding="false"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_14ssp"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+
+    <TextView
+        android:id="@+id/tvSpecialty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        tools:text="Specialty: Pitching"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:includeFontPadding="false"
+        android:textColor="@color/gray_light_text_color"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@+id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="fitCenter"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_right_white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

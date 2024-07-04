@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.WheelActivity">
+
+    <me.sujanpoudel.wheelview.WheelView
+        android:id="@+id/wheel_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:wheelDividerStrokeWidth="1dp"
+        app:wheelArcBackgroundColor="#F7F8FB"
+        app:wheelSelectedArcBackgroundColor="@color/colorPrimary"
+        app:wheelCenterIcon="@drawable/ic_home"
+        app:wheelCenterIconPadding="16dp"
+        app:wheelCenterIconTint="@android:color/white"
+        app:wheelAnchorAngle="270"
+        app:wheelStartAngle="315"
+        app:wheelTextSize="16sp"
+        app:wheelSelectedTextColor="@color/red"
+        app:wheelTextColor="@color/textLightBlue"
+        app:wheelAnimationDuration="800"
+        app:wheelMode="ANIMATE_TO_ANCHOR"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

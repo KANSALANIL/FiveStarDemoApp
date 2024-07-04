@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_13sdp"
+    android:paddingTop="@dimen/_11sdp"
+    android:paddingEnd="@dimen/_13sdp">
+
+    <ProgressBar
+        android:id="@+id/progressBarJournal"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivJournal"
+        app:layout_constraintEnd_toEndOf="@+id/ivJournal"
+        app:layout_constraintStart_toStartOf="@+id/ivJournal"
+        app:layout_constraintTop_toTopOf="@+id/ivJournal" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivJournal"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <ImageView
+        android:id="@+id/ivPlayVideo"
+        android:layout_width="@dimen/_31sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:visibility="invisible"
+        android:padding="@dimen/_4sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintBottom_toBottomOf="@id/ivJournal"
+        app:layout_constraintEnd_toEndOf="@id/ivJournal"
+        app:layout_constraintStart_toStartOf="@id/ivJournal"
+        app:layout_constraintTop_toTopOf="@id/ivJournal"
+        app:srcCompat="@drawable/ic_pause"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:fontFamily="@font/urbanist_bold_700"
+        android:maxLines="1"
+        tools:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivJournal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:maxLines="2"
+        android:textColor="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivJournal"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        tools:text="It is a long established fact that a reader will be distracted by the......" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_thin"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@color/grayBorder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivJournal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

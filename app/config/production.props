@@ -1,0 +1,27 @@
+# Configs for "dev" productFlavor
+
+# API configs
+BASE_URL = ""
+#"https://fivestarmind.com/api/"
+
+# Media configs
+BASE_MEDIA_URL = ""
+#"https://fivestarmind.com/storage/"
+
+# PROFILE URL
+BASE_PROFILE_URL = ""
+#"https://fivestarmind.com/storage/profile/"
+
+# Socket configs
+BASE_SOCKET_URL = ""
+ #"https://fivestarmind.com/chat"
+
+CHAT_BASE_URL = ""
+#"https://fivestarmind.com/chatapi/"
+
+BASE_SOCKET_PATH = ""
+# "/chat/socket.io"
+
+#Terms & conditions
+TERMS_URL = ""
+# "https://fivestarmind.com/"

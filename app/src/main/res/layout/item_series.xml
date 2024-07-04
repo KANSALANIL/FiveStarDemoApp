@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_12sdp"
+    android:foreground="@drawable/ripple_box_top_corner_10"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="@dimen/_175sdp"
+        android:layout_height="@dimen/_171sdp"
+        android:background="@drawable/drawable_curve_top_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductImage"
+            app:layout_constraintEnd_toEndOf="@+id/ivProductImage"
+            app:layout_constraintStart_toStartOf="@+id/ivProductImage"
+            app:layout_constraintTop_toTopOf="@+id/ivProductImage" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_top_left="@dimen/_10sdp"
+            app:riv_corner_radius_top_right="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/ivPlayVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_desc"
+            app:layout_constraintBottom_toBottomOf="@id/ivProductImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivProductImage"
+            app:srcCompat="@drawable/ic_pause"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:fontFamily="@font/urbanist_bold_700"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toTopOf="@+id/tvSubTitle"
+            app:layout_constraintEnd_toStartOf="@id/ivFavorite"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Phase 1" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:singleLine="true"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toTopOf="@+id/tvVideosCount"
+            app:layout_constraintEnd_toStartOf="@id/ivFavorite"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Quick Touch" />
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="@dimen/_21sdp"
+            android:layout_height="@dimen/_21sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:contentDescription="@string/img_desc"
+            android:foreground="@drawable/ripple_box"
+            android:padding="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:srcCompat="@drawable/selector_favorite"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tvVideosCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:textColor="@color/textGrayLight"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="4 Videos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/box_black_dim_top_lr_corner_32"
+    android:paddingStart="@dimen/_17sdp"
+    android:paddingTop="@dimen/_28sdp"
+    android:paddingEnd="@dimen/_17sdp"
+    android:paddingBottom="@dimen/_28sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:ignore="spUsage">
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_21sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:textAlignment="center"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        android:maxLines="2"
+        app:layout_constraintBottom_toTopOf="@id/btnPositive"
+        tools:text="@string/mastered_description" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@style/ButtonSmallGrayStyle"
+        android:stateListAnimator="@null"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPositive"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/btnPositive"
+        style="@style/ButtonSmallBlueStyle"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        tools:ignore="UnusedAttribute"
+        tools:text="@string/mastered" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

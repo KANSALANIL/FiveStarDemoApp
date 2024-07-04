@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.MyMembershipActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clMembership"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_21sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:background="@drawable/bg_edittext"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingTop="@dimen/_21sdp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolbar">
+
+        <TextView
+            android:id="@+id/tvMembershipType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold_700"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_17ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Individual Subscription" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_21sdp"
+            android:fontFamily="@font/urbanist_extrabold_800"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMembershipType"
+            tools:text="$99.9" />
+
+        <TextView
+            android:id="@+id/tvMembershipPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            tools:text="1 Year" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/bg_blackdim_outline_graydim_corner_7"
+            android:layout_marginTop="@dimen/_21sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMembershipPeriod">
+
+            <ImageView
+                android:id="@+id/ivStart"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:contentDescription="@string/app_name"
+                android:foreground="@drawable/ripple_box"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_calendar"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/urbanist_bold_700"
+                android:text="@string/start_date"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@+id/ivStart"
+                app:layout_constraintTop_toTopOf="@id/ivStart"
+                app:layout_constraintBottom_toTopOf="@+id/ivStart"/>
+
+            <TextView
+                android:id="@+id/tvStartDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:textColor="@color/textWhiteTransparent40"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvStartDate"
+                app:layout_constraintTop_toBottomOf="@id/ivStart"
+                app:layout_constraintBottom_toBottomOf="@+id/ivStart"
+                tools:text="Jun 2, 2023" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="0dp"
+                android:background="@color/grayDim"
+                app:layout_constraintTop_toTopOf="@+id/tvStartDate"
+                app:layout_constraintBottom_toBottomOf="@+id/tvStartDateValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ivEnd"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:contentDescription="@string/app_name"
+                android:foreground="@drawable/ripple_box"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_calendar"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/urbanist_bold_700"
+                android:text="@string/end_date"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@+id/ivEnd"
+                app:layout_constraintTop_toTopOf="@id/ivEnd"
+                app:layout_constraintBottom_toTopOf="@+id/ivEnd"/>
+
+            <TextView
+                android:id="@+id/tvEndDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:textColor="@color/textWhiteTransparent40"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/tvEndDate"
+                app:layout_constraintTop_toBottomOf="@id/ivEnd"
+                app:layout_constraintBottom_toBottomOf="@+id/ivEnd"
+                tools:text="Jun 2, 2023" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnCancelSubscription"
+            style="@style/ButtonLargeBlueStyle"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:text="@string/cancel_subscription"
+            android:visibility="gone"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clDates" />
+
+        <TextView
+            android:id="@+id/tvMembershipExpired"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:text="@string/you_have_canceled_your_subscription_for_auto_renewal"
+            android:textAlignment="center"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clDates" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/llEmptyMsg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:contentDescription="@string/app_name"
+            android:foreground="@drawable/ripple_box"
+            app:srcCompat="@drawable/ic_cookie"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tvEmptyMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:text="@string/no_membership_yet"
+            android:textAlignment="center"
+            android:textColor="@color/textWhiteTransparent40"
+            android:textSize="@dimen/_13ssp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

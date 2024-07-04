@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.MenuDetailActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/detailAudioPlayerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategoriesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="3"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_category"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_11sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMenudetailNoDataFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data_found"
+                android:textColor="@color/textWhite"
+                android:elevation="@dimen/_5sdp"
+                android:visibility="gone"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/rvItemList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="true"
+                android:paddingBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:itemCount="1"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_my_favorite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCategoriesName"
+               />
+
+
+        <!--    <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/rvImageList"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipToPadding="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:itemCount="5"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_images"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCategoriesName"
+                app:layout_constraintBottom_toBottomOf="parent" />
+-->
+
+
+
+            <ProgressBar
+                android:id="@+id/pbLoadMore"
+                style="@android:style/Widget.ProgressBar.Small.Inverse"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:visibility="gone"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clShowImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <include  layout="@layout/item_images"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvImageList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        tools:itemCount="5"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_images"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/detailAudioPlayerView"
+        android:layout_width="match_parent"
+        app:controller_layout_id="@layout/layout_home_mini_player"
+        android:layout_height="@dimen/_70sdp"
+        android:keepScreenOn="true"
+        app:show_timeout="0"
+        app:use_artwork="false"
+        app:hide_on_touch="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:resize_mode="fit"
+        app:show_buffering="never"/>
+
+    <!--
+    app:layout_constraintTop_toBottomOf="@+id/refreshLayout"
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

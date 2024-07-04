@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.MyFavoriteActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bookmarkMiniPlayer"
+           app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAllVideos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvAllVideos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="ALL VIDEOS"
+                android:singleLine="true"
+                android:layout_marginHorizontal="@dimen/_17sdp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBookmarks"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_28sdp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                tools:itemCount="5"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_my_favorite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAllVideos" />
+
+            <TextView
+                android:id="@+id/tvNoDataFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data_found"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_15ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/pbLoadMore"
+                style="@android:style/Widget.ProgressBar.Small.Inverse"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:padding="@dimen/_4sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/bookmarkMiniPlayer"
+        android:layout_width="match_parent"
+        app:controller_layout_id="@layout/layout_home_mini_player"
+        android:layout_height="@dimen/_70sdp"
+        android:keepScreenOn="true"
+        app:show_timeout="0"
+        app:use_artwork="false"
+        app:hide_on_touch="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clRefreshLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:resize_mode="fit"
+        app:show_buffering="never"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

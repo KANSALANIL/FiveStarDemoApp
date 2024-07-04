@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.SuggestionsActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/tvTitleSugg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:text="@string/title_text"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/bg_edittext"
+        android:hint="@string/hint_title"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="@integer/title_max"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/_11sdp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleSugg" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:text="@string/note"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_66sdp"
+        android:background="@drawable/drawable_gray_light_hollow"
+        android:gravity="top"
+        android:hint="@string/hint_text"
+        android:maxLength="250"
+        android:maxLines="10"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/textWhite"
+        android:textColorHint="@color/textGrayMedium"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNote" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.ProductDetailActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+
+            <ProgressBar
+                android:id="@+id/pbLoadMore"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/ivProduct"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivProduct" />
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1.6:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@+id/ivProduct"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintEnd_toEndOf="@id/guidelineRight">
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_extrabold_800"
+                    android:maxLines="2"
+                    tools:text="Technical Core 90"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_bold_700"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvProductName"
+                    tools:text="$30" />
+
+                <TextView
+                    android:id="@+id/tvVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:fontFamily="@font/urbanist_regular_400"
+                    android:textColor="@color/textWhiteTransparent40"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="@+id/tvProductName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+                    tools:text="94 Videos   |   5 PDF’s" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_blue_rectangle_hollow"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:foreground="@drawable/ripple_box_corner_4"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/textBlue"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+                app:layout_constraintBottom_toBottomOf="@+id/clName"
+                tools:ignore="UnusedAttribute" />
+
+            <View
+                android:id="@+id/viewBottomImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddToCart" />
+
+            <TextView
+                android:id="@+id/tvDescriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/urbanist_bold_700"
+                android:text="@string/text_description"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/viewBottomImage" />
+
+            <WebView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:scrollbars="none"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitle" />
+
+            <View
+                android:id="@+id/viewBottomDescription"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvSkill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/urbanist_medium_500"
+                android:text="@string/skill"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/viewBottomDescription" />
+
+            <ProgressBar
+                android:id="@+id/pbSkill"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:max="10"
+                android:progress="6"
+                android:visibility="gone"
+                android:progressDrawable="@drawable/drawable_progress_bar_red"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvSkill" />
+
+            <TextView
+                android:id="@+id/tvTactical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/urbanist_medium_500"
+                android:text="@string/tactical"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/pbSkill" />
+
+            <ProgressBar
+                android:id="@+id/pbTactical"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:max="10"
+                android:progress="6"
+                android:visibility="gone"
+                android:progressDrawable="@drawable/drawable_progress_bar_blue"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvTactical" />
+
+            <TextView
+                android:id="@+id/tvIntensity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/urbanist_medium_500"
+                android:text="@string/intensity"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/pbTactical" />
+
+            <ProgressBar
+                android:id="@+id/pbIntensity"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:max="10"
+                android:progress="6"
+                android:visibility="gone"
+                android:progressDrawable="@drawable/drawable_progress_bar_green"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvIntensity" />
+
+            <TextView
+                android:id="@+id/tvForYou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_21sdp"
+                android:fontFamily="@font/urbanist_medium_500"
+                android:text="@string/for_you"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/pbIntensity" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPhases"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvForYou" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

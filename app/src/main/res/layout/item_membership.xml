@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_21sdp"
+    android:background="@drawable/bg_blackdim_outline_graydim_corner_14"
+    android:foreground="@drawable/ripple_box_corner_14"
+    android:paddingStart="@dimen/_7sdp"
+    android:paddingEnd="@dimen/_7sdp"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/tvMembershipType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_17sdp"
+        android:paddingBottom="@dimen/_17sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/individual"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivDropDown"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvMembershipType"
+        app:layout_constraintBottom_toBottomOf="@id/tvMembershipType"
+        app:srcCompat="@drawable/ic_arrow_right_white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clInner"
+        android:layout_width="0dp"
+        android:paddingBottom="@dimen/_17sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMembershipType">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvTeamMembershipDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_regular_400"
+            android:text="@string/team_membership_desc"
+            android:textColor="@color/textGrayLightest"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMemberships"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTeamMembershipDesc"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_team_membership" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutPromoCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:background="@drawable/bg_blackdim_outline_graydim_corner_14"
+            app:layout_constraintTop_toBottomOf="@id/rvMemberships">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPromoCode"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_47sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/etPromoCode"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_47sdp"
+                    android:drawableStart="@drawable/ic_gift"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:fontFamily="@font/urbanist_regular_400"
+                    android:hint="@string/hint_promo_code"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textGrayLight"
+                    android:textSize="@dimen/_11ssp"
+                    android:background="@null"
+                    app:layout_constraintEnd_toStartOf="@+id/tvApply"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvApply"
+                    android:layout_width="@dimen/_73sdp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_black_outline_blue_corner_14"
+                    android:fontFamily="@font/urbanist_semibold_600"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:text="@string/apply"
+                    android:gravity="center"
+                    android:textColor="@color/textBlue"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/etPromoCode"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAppliedPromoCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_check" />
+
+                <TextView
+                    android:id="@+id/tvCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/urbanist_medium_500"
+                    android:text="@string/coupon"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toEndOf="@+id/ivCheck"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCouponName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:fontFamily="@font/urbanist_regular_400"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textBlue"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toEndOf="@+id/tvCoupon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDiscountVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_medium_500"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textGrayMedium"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="@+id/tvCoupon"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCoupon" />
+
+                <ImageView
+                    android:id="@+id/ivCross"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_cross_bg_red" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnDetails"
+            style="@style/ButtonLargeBlueStyle"
+            android:layout_marginTop="@dimen/_21sdp"
+            android:text="@string/subscribe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutPromoCode"
+            tools:ignore="UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

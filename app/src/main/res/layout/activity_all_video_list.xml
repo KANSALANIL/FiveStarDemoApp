@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.AllVideoListActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_48sdp"
+        android:background="@color/grayDarker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow_white"
+            tools:ignore="UnusedAttribute" />
+
+        <ImageView
+            android:id="@+id/ivVideoFilter"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_11sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivBookMarks"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_video_filter" />
+
+        <ImageView
+
+            android:id="@+id/ivBookMarks"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_3sdp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_book"
+            tools:ignore="UnusedAttribute" />
+
+        <!--            android:foreground="@drawable/ripple_box"
+        -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivBookMarks"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/mental_minutes" />
+
+        <TextView
+            android:id="@+id/tvCartCount"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/drawable_blue_circle"
+            android:gravity="center"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/ivBookMarks"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayoutAllVideos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/allAudioPlayerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+        <!-- <androidx.core.widget.NestedScrollView
+             android:id="@+id/svAllProducts"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:clipToPadding="false"
+             android:paddingBottom="@dimen/_28sdp"
+             android:fillViewport="true"
+             android:scrollbars="none">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <ProgressBar
+                android:id="@+id/pbLoadMore"
+                style="@android:style/Widget.ProgressBar.Small.Inverse"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:padding="@dimen/_4sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvItemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:singleLine="true"
+                android:textColor="@color/gray_light_text_count"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="80" />
+
+            <TextView
+                android:id="@+id/tvNoDataFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data_found"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_15ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAllVideos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="ALL VIDEOS" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllVideos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAllVideos"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_my_favorite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--</androidx.core.widget.NestedScrollView>-->
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:visibility="gone"
+        android:id="@+id/allAudioPlayerView"
+        android:layout_width="match_parent"
+        app:controller_layout_id="@layout/layout_home_mini_player"
+        android:layout_height="@dimen/_70sdp"
+        android:keepScreenOn="true"
+        app:show_timeout="0"
+        app:use_artwork="false"
+        app:hide_on_touch="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refreshLayoutAllVideos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:resize_mode="fit"
+        app:show_buffering="never"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_4sdp"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginEnd="@dimen/_4sdp"
+    android:padding="@dimen/_11sdp"
+    android:background="@drawable/selector_gray_dark_corner_blue"
+    android:foreground="@drawable/ripple_box_corner_7"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_bold_700"
+        android:text="@string/five_hundred"
+        android:textColor="@color/textBlue"
+        android:textSize="@dimen/_19ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/hundred_codes"
+        android:textColor="@color/textGrayLight"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

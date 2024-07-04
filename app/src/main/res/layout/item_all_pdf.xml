@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPdfRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_17sdp"
+    android:layout_marginTop="@dimen/_7sdp"
+    android:layout_marginBottom="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_17sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPdf"
+        android:layout_width="@dimen/_71sdp"
+        android:layout_height="@dimen/_71sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/box_black_dim_corner_7">
+
+        <ImageView
+            android:id="@+id/ivPdf"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="@dimen/_58sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:background="@drawable/box_black_dim_corner_14"
+            android:foreground="@color/blackTransparent70"
+            android:src="@drawable/dummy_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarMyPrograms"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/clPdf"
+        app:layout_constraintEnd_toEndOf="@+id/clPdf"
+        app:layout_constraintStart_toStartOf="@+id/clPdf"
+        app:layout_constraintTop_toTopOf="@+id/clPdf" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="@+id/clPdf"
+        app:layout_constraintBottom_toBottomOf="@+id/clPdf"
+        app:layout_constraintStart_toEndOf="@+id/clPdf"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Mike Tyson Mental Minute"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivPdfBookMark"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivMaster"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:padding="@dimen/_4sdp"
+            android:contentDescription="@string/img_desc"
+            android:foreground="@drawable/ripple_box"
+            app:layout_constraintEnd_toStartOf="@id/ivPdfBookMark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/selector_mastered"
+            tools:ignore="UnusedAttribute" />
+
+<!--            android:foreground="@drawable/ripple_box"
+-->
+        <ImageView
+            android:id="@+id/ivPdfBookMark"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:padding="@dimen/_4sdp"
+
+            android:contentDescription="@string/img_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/selector_favorite"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tvDiscription"
+            android:layout_width="@dimen/_151sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:lines="2"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/textWhiteTransparent50"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:text="A Champions determination, should never be underestimated " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@drawable/line"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clPdf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

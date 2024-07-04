@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeWhite" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/grayDark</item>
+        <item name="colorPrimaryDark">@color/grayDark</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

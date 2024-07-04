@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fivestarmind.android"
+    android:targetSandboxVersion="1">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <application
+        android:name=".application.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
+        tools:replace="allowBackup,supportsRtl">
+        <activity
+            android:name=".mvp.activity.ImageDetailActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".mvp.activity.GymActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvp.activity.HomeTabsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.ChatUserListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.FilterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.WheelActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.BookmarksAllCategory"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.ChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".mvp.activity.AllPdfListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.BookMarkActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.AllVideoListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.OpenPdfFileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.MenuDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- singleTask -->
+        <activity
+            android:name=".mvp.activity.AudioPlayActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.ContactCenterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name=".mvp.activity.SplashActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Branch URI Scheme -->
+            <intent-filter>
+                <!-- If utilizing $deeplink_path please explicitly declare your hosts, or utilize a wildcard(*) -->
+                <!-- REPLACE `android:scheme` with your Android URI scheme -->
+                <data android:scheme="fivestarmind" android:host="deeplink" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- Branch App Links - Live App -->
+            <intent-filter android:autoVerify="true" tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- REPLACE `android:host` with your `app.link` domain -->
+                <data android:scheme="https" android:host="8go68.app.link" />
+                <!-- REPLACE `android:host` with your `-alternate` domain (required for proper functioning of App Links and Deepviews) -->
+                <data android:scheme="https" android:host="8go68.app.link" />
+            </intent-filter>
+
+            <!-- Branch App Links - Test App -->
+            <intent-filter android:autoVerify="true" tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="8go68.test-app.link" />
+                <!-- REPLACE `android:host` with your `-alternate` domain (required for proper functioning of App Links and Deepviews) -->
+                <data android:scheme="https" android:host="8go68.test-app.link" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".mvp.activity.BaseActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mvp.activity.LetsGoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".mvp.activity.SignInActivity"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <tools:validation testUrl="https://fivestarmind.com" />
+
+        </activity>
+
+        <activity
+            android:name=".mvp.activity.SignUpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.OnboardingQuestionsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.ForgotPasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.HomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.MyAccountActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.WebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.SettingsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.JournalListingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.SuggestionsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.ContactUsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.ProfileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.AddJournalActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.ChangePasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.activity.ProductDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mvp.activity.TransactionsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.MembershipsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.MyMembershipActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.MyFavoriteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.ProductPhaseListingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mvp.activity.CardDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.CartActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.activity.MyProgramsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mvp.activity.ProgramsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.MembershipCardDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.SelfAssessmentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.activity.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".mvp.activity.JournalVideoPlayerActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_app_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+
+        <!--Deep Link Branch query-->
+        <!-- Branch init -->
+        <!-- REPLACE `BranchKey` with the value from your Branch Dashboard -->
+        <!--key_live_kAlJpEeBhG6pn6WwC1raHfmpwraruHMA-->
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="" />
+        <!-- REPLACE `BranchKey.test` with the value from your Branch Dashboard -->
+        <!--key_test_XXX-->
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="" />
+        <!-- Set to `true` to use `BranchKey.test` -->
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".service.AppVideosService"
+            android:description="@string/img_desc"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.MyAppPerformance"
+            android:description="@string/img_desc"
+            android:enabled="true"
+            android:exported="false" /> <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming notification message. -->
+        <service
+            android:name=".firebase.FirebaseMessagingReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+    <queries>
+
+        <!-- Browser -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="http" />
+        </intent>
+
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+<!--Branch query for deep link-->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+</manifest>

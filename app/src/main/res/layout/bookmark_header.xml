@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_12sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textWhite"
+        android:textAllCaps="true"
+        android:singleLine="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_13ssp"
+        tools:text="Title test text"
+        app:layout_constraintEnd_toStartOf="@+id/tvSeeAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSeeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:textColor="@color/gray_light"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/_10ssp"
+        tools:text="@string/see_all_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

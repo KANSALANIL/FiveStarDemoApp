@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_13sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_13sdp">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCartProduct"
+        app:layout_constraintEnd_toEndOf="@+id/ivCartProduct"
+        app:layout_constraintStart_toStartOf="@+id/ivCartProduct"
+        app:layout_constraintTop_toTopOf="@+id/ivCartProduct" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCartProduct"
+        android:layout_width="@dimen/_74sdp"
+        android:layout_height="@dimen/_74sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_bold_700"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivCartProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:text="@string/price"
+        android:textColor="@color/textBlue"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintStart_toEndOf="@id/ivCartProduct"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+    <TextView
+        android:id="@+id/tvDiscountedPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/price"
+        android:textColor="@color/textGrayLight"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+        app:layout_constraintStart_toEndOf="@id/tvPrice"
+        app:layout_constraintTop_toTopOf="@id/tvPrice" />
+
+    <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:contentDescription="@string/app_name"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/tvCouponValue"
+        app:layout_constraintStart_toEndOf="@id/ivCartProduct"
+        app:layout_constraintTop_toTopOf="@id/tvCouponValue"
+        app:srcCompat="@drawable/ic_check" />
+
+    <TextView
+        android:id="@+id/tvCouponValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_15ssp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivCheck"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+    <ImageView
+        android:id="@+id/ivCross"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cross_bg_red" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_thin"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:background="@drawable/bg_edittext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCartProduct" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

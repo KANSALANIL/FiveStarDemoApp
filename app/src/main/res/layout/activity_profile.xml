@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".mvp.activity.ProfileActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_28sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_112sdp"
+                android:layout_height="@dimen/_112sdp"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:background="@drawable/ic_user_placeholder"
+                android:contentDescription="@string/img_desc"
+                android:foreground="@drawable/ripple_round"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/_56sdp"
+                tools:ignore="UnusedAttribute" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+                app:layout_constraintEnd_toEndOf="@+id/ivProfile"
+                app:layout_constraintStart_toStartOf="@+id/ivProfile"
+                app:layout_constraintTop_toTopOf="@+id/ivProfile" />
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:contentDescription="@string/img_desc"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfile"
+                app:layout_constraintEnd_toEndOf="@id/ivProfile"
+                app:srcCompat="@drawable/ic_image_upload"
+                android:foregroundTint="@color/red"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/name"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_type_here"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/name_max"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/email_address"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etName" />
+
+            <TextView
+                android:id="@+id/etEmail"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_email"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/phone_number"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+            <EditText
+                android:visibility="gone"
+
+                android:id="@+id/etNumber"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/phone_max"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber" />
+
+            <TextView
+                android:visibility="gone"
+
+                android:id="@+id/tvClubCollege"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/club_college_"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etNumber" />
+
+            <EditText
+                android:visibility="gone"
+
+                android:id="@+id/etClubCollege"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_college"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="@integer/state_college_max"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvClubCollege" />
+
+            <TextView
+                android:visibility="gone"
+
+                android:id="@+id/tvState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/urbanist_regular_400"
+                android:text="@string/state_"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etClubCollege" />
+
+            <EditText
+                android:visibility="gone"
+
+                android:id="@+id/etState"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="@string/hint_state"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="@integer/state_college_max"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvState" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+   <!-- <Button
+        android:id="@+id/btnSave"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeleteAccount"
+        app:layout_constraintEnd_toEndOf="@+id/btnDeleteAccount"
+        app:layout_constraintStart_toStartOf="@+id/btnDeleteAccount" />
+-->
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_55sdp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"  />
+
+    <!--<Button
+        android:id="@+id/btnDeleteAccount"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/delete_account"
+        android:textColor="@color/textWhiteTransparent40"
+        android:background="@drawable/box_black_dim_corner_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

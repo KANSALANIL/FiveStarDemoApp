@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:layout_gravity="bottom"
+    android:layout_marginHorizontal="@dimen/_4sdp"
+    android:layout_marginVertical="@dimen/_4sdp"
+    android:background="@drawable/box_gray_dark_corner_7">
+
+   <!-- <ImageView
+        android:id="@+id/ivAudioBookmark"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:contentDescription="@string/img_desc"
+        android:padding="@dimen/_2sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/clMediaControler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clMediaControler"
+        tools:ignore="UnusedAttribute"
+        tools:srcCompat="@drawable/ic_unselected_book_mark" />-->
+
+    <TextView
+        android:id="@+id/exo_duration"
+        style="@style/ExoStyledControls.TimeText.Duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_21sdp"
+        android:layout_marginEnd="@dimen/_21sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/gray_light_text_color"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute"
+        tools:text="02:30" />
+
+    <TextView
+        android:id="@+id/exo_position"
+        style="@style/ExoStyledControls.TimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_21sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/gray_light_text_color"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute"
+        tools:text="00:00" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMediaControler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exo_progress">
+
+        <ProgressBar
+            android:id="@+id/progressBarExo"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:elevation="@dimen/_2sdp"
+            android:indeterminateTint="@color/light_blue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/cvExoIcon"
+            app:layout_constraintEnd_toEndOf="@+id/cvExoIcon"
+            app:layout_constraintStart_toStartOf="@+id/cvExoIcon"
+            app:layout_constraintTop_toTopOf="@+id/cvExoIcon" />
+
+
+        <TextView
+            android:id="@+id/tvAudioTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:ems="7"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_medium"
+            android:lines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/cvExoIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute"
+            tools:text="Song Title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvExoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_17sdp"
+            app:cardBackgroundColor="@color/gray_light"
+
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ivExoIcon"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/img_desc"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/dummy_img"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- app:layout_constraintStart_toEndOf="@+id/exo_rew"-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_17sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/exo_prev"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:contentDescription="@string/img_desc"
+                app:layout_constraintBottom_toBottomOf="@+id/clpay"
+                app:layout_constraintEnd_toStartOf="@+id/clpay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_play_backword"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/exo_next"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:contentDescription="@string/img_desc"
+                app:layout_constraintBottom_toBottomOf="@+id/clpay"
+                app:layout_constraintStart_toEndOf="@+id/clpay"
+                app:layout_constraintTop_toTopOf="@+id/clpay"
+                app:srcCompat="@drawable/ic_play_forward"
+                tools:ignore="UnusedAttribute" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/exo_play"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@string/img_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pause"
+                    tools:ignore="UnusedAttribute" />
+
+                <!--android:layout_marginStart="@dimen/_14sdp"-->
+
+                <ImageView
+                    android:id="@+id/exo_pause"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@string/img_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_play"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- <ProgressBar
+         android:id="@+id/pbAudio"
+         style="@android:style/Widget.ProgressBar.Horizontal"
+         android:layout_width="match_parent"
+         android:layout_marginHorizontal="@dimen/_21sdp"
+         android:layout_height="@dimen/_3sdp"
+         tools:progress="35"
+         android:layout_marginTop="@dimen/_11sdp"
+         android:progressDrawable="@drawable/drawable_progress_bar_blue"
+         app:layout_constraintTop_toBottomOf="@id/tvStartTime" />-->
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        app:buffered_color="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exo_position"
+        app:played_color="@color/colorAccent"
+        app:unplayed_color="@color/gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

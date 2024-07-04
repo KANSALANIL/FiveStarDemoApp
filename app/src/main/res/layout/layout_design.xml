@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clRootDesign"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvWhatsYouPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold_700"
+            android:text="@string/whats_your_plan_"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTrainingDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/urbanist_medium_500"
+            android:text="@string/training_days"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWhatsYouPlan" />
+
+        <EditText
+            android:id="@+id/etTrainingDays"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/hint_enter_training_days"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="@integer/hours_max"
+            android:paddingBottom="@dimen/_11sdp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTrainingDays" />
+
+        <TextView
+            android:id="@+id/tvFocus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/urbanist_medium_500"
+            android:text="@string/focus"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etTrainingDays" />
+
+        <EditText
+            android:id="@+id/etFocus"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_78sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="start|top"
+            android:hint="@string/hint_enter_focus"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLength="@integer/focus_max"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:paddingBottom="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFocus" />
+
+        <TextView
+            android:id="@+id/tvGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/urbanist_medium_500"
+            android:text="@string/goal"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etFocus" />
+
+        <EditText
+            android:id="@+id/etGoal"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_78sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="top"
+            android:hint="@string/hint_enter_goal"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="@integer/goal_max"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:paddingBottom="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGoal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

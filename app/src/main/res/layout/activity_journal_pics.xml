@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.AddJournalActivity">
+
+    <include
+        android:id="@+id/clToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/tvJourney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/one_step_in_your_journey"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clJournalPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:foreground="@drawable/ripple_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJourney"
+        tools:ignore="UnusedAttribute">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivJournal"
+            android:layout_width="@dimen/_103sdp"
+            android:layout_height="@dimen/_103sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true"
+            android:background="@drawable/ic_placeholder" />
+
+        <ImageView
+            android:id="@+id/ivJournalPic"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_camera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pbLoadMore"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/clJournalPic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clJournalPic" />
+
+    <TextView
+        android:id="@+id/tvUploadPhotoOrVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/upload_photo_or_video"
+        android:textColor="@color/textGrayLight"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clJournalPic" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:text="@string/date"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUploadPhotoOrVideo" />
+
+    <TextView
+        android:id="@+id/etDate"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/bg_edittext"
+        android:hint="@string/hint_date"
+        android:paddingBottom="@dimen/_11sdp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:text="@string/note"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDate" />
+
+    <EditText
+        android:id="@+id/etNote"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="top"
+        android:hint="@string/hint_note"
+        android:maxLength="100"
+        android:minLines="4"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNote" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/ButtonLargeBlueStyle"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+# Configs for "dev" productFlavor
+
+# API configs
+BASE_URL = ""
+#"http://103.149.154.53/5starmind/api/"
+
+# Media configs
+BASE_MEDIA_URL = ""
+#"http://103.149.154.53/5starstorage/"
+
+# PROFILE URL
+BASE_PROFILE_URL = ""
+# "http://103.149.154.53/5starstorage/profile/"
+
+# Socket configs
+BASE_SOCKET_URL = ""
+"http://103.149.154.53/chat"
+CHAT_BASE_URL = ""
+"http://103.149.154.53/5starapi/"
+BASE_SOCKET_PATH = ""
+"/5starchat/socket.io"
+
+#Terms & conditions
+TERMS_URL = ""
+"http://103.149.154.53/5starmind/"

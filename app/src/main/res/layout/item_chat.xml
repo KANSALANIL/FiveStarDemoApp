@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_5sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:paddingBottom="@dimen/_4sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clTimeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/viewLeft"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            android:layout_marginEnd="@dimen/_6sdp"
+            app:layout_constraintEnd_toStartOf="@id/tvChatTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvChatTime"
+            app:layout_constraintTop_toTopOf="@id/tvChatTime"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_9ssp"
+            android:text="Toady"
+            android:textColor="@color/gray_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            android:layout_marginStart="@dimen/_6sdp"
+            app:layout_constraintStart_toEndOf="@id/tvChatTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvChatTime"
+            app:layout_constraintTop_toTopOf="@id/tvChatTime"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSenderRoot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:background="@drawable/bg_white_corner_7"
+            android:paddingEnd="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReceived"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:text="Okay, How can i be of help"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toBottomOf="@+id/clSender">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivSenderProfileImage"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+
+                android:contentDescription="@string/img_desc"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:riv_corner_radius="@dimen/_56sdp"
+                tools:src="@drawable/ic_user_placeholder"
+                tools:ignore="UnusedAttribute"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ProgressBar
+                android:id="@+id/pbSenderImage"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:visibility="gone"
+                android:elevation="@dimen/_2sdp"
+                android:indeterminateTint="@color/light_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSenderProfileImage"
+                app:layout_constraintEnd_toEndOf="@+id/ivSenderProfileImage"
+                app:layout_constraintStart_toStartOf="@+id/ivSenderProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/ivSenderProfileImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSenderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_regular"
+                tools:text="Sender"
+                android:textColor="@color/gray_text_time"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintStart_toEndOf="@+id/ivSenderProfileImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@color/gray_text_time"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvSenderName"
+                app:layout_constraintEnd_toStartOf="@+id/tvSenderTime"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSenderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="02.00pm"
+                android:textColor="@color/gray_text_time"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintStart_toEndOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserSide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clSenderRoot">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:background="@drawable/bg_blackdim_graydim_corner_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSendUserMessage"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="@id/clUser"
+            app:layout_constraintTop_toBottomOf="@id/clUser">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivUserProfileImage"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                tools:src="@drawable/ic_user_placeholder"
+                android:contentDescription="@string/img_desc"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/_56sdp"
+                tools:ignore="UnusedAttribute" />
+
+            <ProgressBar
+                android:id="@+id/pbUserImage"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:visibility="gone"
+                android:elevation="@dimen/_2sdp"
+                android:indeterminateTint="@color/light_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/ivUserProfileImage"
+                app:layout_constraintEnd_toEndOf="@+id/ivUserProfileImage"
+                app:layout_constraintStart_toStartOf="@+id/ivUserProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/ivUserProfileImage" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@color/gray_text_time"
+                app:layout_constraintEnd_toStartOf="@+id/tvTimeUser"
+                app:layout_constraintStart_toEndOf="@+id/tvUserName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_regular"
+                tools:text="Me"
+                android:textColor="@color/gray_text_time"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintStart_toEndOf="@+id/ivUserProfileImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimeUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="2.00pm"
+                android:textColor="@color/gray_text_time"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

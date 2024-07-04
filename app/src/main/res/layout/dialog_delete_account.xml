@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="@dimen/_7sdp"
+    android:background="@drawable/box_black_dim_top_lr_corner_32"
+    android:paddingHorizontal="@dimen/_14sdp"
+    android:paddingTop="@dimen/_35sdp"
+    android:paddingBottom="@dimen/_24sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:ignore="spUsage">
+
+    <Button
+        android:id="@+id/btnPositive"
+        style="@style/ButtonSmallBlueStyle"
+        android:layout_height="@dimen/_45sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:stateListAnimator="@null"
+        android:text="@string/yes"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnGoBack"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/btnGoBack"
+        style="@style/ButtonSmallGrayStyle"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:stateListAnimator="@null"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnPositive"
+        tools:ignore="UnusedAttribute"
+        android:text="@string/no" />
+
+
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/delete_account"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_42sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/you_have_selected_to_delete_your_account"
+        android:textAlignment="center"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toTopOf="@id/btnPositive" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

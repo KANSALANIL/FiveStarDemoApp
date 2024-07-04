@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.AudioPlayActivity">
+
+    <!--<include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:paddingStart="@dimen/_17sdp"
+        android:paddingEnd="@dimen/_17sdp"
+        android:background="@color/grayDarker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--  android:foreground="@drawable/ripple_box"-->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow_white"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:fontFamily="@font/poppins_bold"
+            tools:text="@string/app_name"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:maxLines="2"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivBookmark"
+            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBookmark"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:visibility="visible"
+            android:padding="@dimen/_2sdp"
+            android:contentDescription="@string/img_desc"
+            app:srcCompat="@drawable/ic_unselected_book_mark"
+            tools:ignore="UnusedAttribute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <!--        android:foreground="@drawable/ripple_box"
+        -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPlayAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_356sdp"
+                    android:background="@color/grayBorder"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 <!--   <com.skyfishjy.library.RippleBackground
+                        android:id="@+id/rippleBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:rb_color="@color/dark_brownish_red"
+                        app:rb_radius="32dp"
+                        app:rb_rippleAmount="4"
+                        app:rb_duration="3000"
+                        app:rb_scale="6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">-->
+
+                    <ProgressBar
+                        android:id="@+id/pbAudio"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:visibility="visible"
+                        android:elevation="@dimen/_2sdp"
+                        android:indeterminateTint="@color/light_blue"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivAudio"
+                        app:layout_constraintEnd_toEndOf="@+id/ivAudio"
+                        app:layout_constraintStart_toStartOf="@+id/ivAudio"
+                        app:layout_constraintTop_toTopOf="@+id/ivAudio" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivAudio"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/box_gray_dark_corner_7"
+                        android:contentDescription="@string/img_desc"
+                        tools:ignore="UnusedAttribute"
+                        tools:src="@drawable/dummy_img"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+<!-- app:riv_corner_radius="@dimen/_7sdp"-->
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="@dimen/_170sdp"
+                            android:layout_height="@dimen/_170sdp"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_49sdp"
+                            android:background="@drawable/bg_audio_circle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                    <!-- </com.skyfishjy.library.RippleBackground>-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvAudioTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    tools:text="Evan Longoria"
+                    android:textColor="@color/gray_light_text_color"
+                    android:textSize="@dimen/_10ssp"
+                    tools:ignore="UnusedAttribute"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clPlayAudio" />
+
+                <TextView
+                    android:id="@+id/tvAudioTitleName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginHorizontal="@dimen/_17sdp"
+                    tools:text="Mental Game Reps (Pitchers)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    tools:ignore="UnusedAttribute"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAudioTitle" />
+
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/audioPlayerView"
+                    android:layout_width="match_parent"
+                    app:controller_layout_id="@layout/layout_audio_custom_player"
+                    android:layout_height="0dp"
+                    android:keepScreenOn="true"
+                    app:use_controller="true"
+                    app:show_timeout="0"
+                    app:use_artwork="false"
+                    app:hide_on_touch="false"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAudioTitleName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:resize_mode="fit"
+                    app:show_buffering="never"/>
+
+               <!-- <TextView
+                    android:id="@+id/tvStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:layout_marginStart="@dimen/_21sdp"
+                    android:text="02:30"
+                    android:textColor="@color/gray_light_text_color"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="UnusedAttribute"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAudioTitleName" />
+
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:layout_marginEnd="@dimen/_21sdp"
+                    android:text="02:30"
+                    android:textColor="@color/gray_light_text_color"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="UnusedAttribute"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAudioTitleName" />
+
+                <ProgressBar
+                    android:id="@+id/pbAudio"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_21sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    tools:progress="35"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:progressDrawable="@drawable/drawable_progress_bar_blue"
+                    app:layout_constraintTop_toBottomOf="@id/tvStartTime" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                  android:visibility="visible"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_49sdp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/pbAudio">
+
+                  <ImageView
+                      android:id="@+id/ivPlayBackword"
+                      android:layout_width="@dimen/_31sdp"
+                      android:layout_height="@dimen/_31sdp"
+                      android:contentDescription="@string/img_desc"
+                      app:srcCompat="@drawable/ic_play_backword"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintBottom_toBottomOf="@+id/ivPlayAudio"
+                      tools:ignore="UnusedAttribute" />
+
+                  <ImageView
+                      android:id="@+id/ivPlayAudio"
+                      android:layout_width="@dimen/_50sdp"
+                      android:layout_height="@dimen/_50sdp"
+                      android:layout_marginStart="@dimen/_14sdp"
+                      android:contentDescription="@string/img_desc"
+                      app:srcCompat="@drawable/ic_pause"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toEndOf="@+id/ivPlayBackword"
+                      tools:ignore="UnusedAttribute" />
+
+
+                  <ImageView
+                      android:id="@+id/ivPlayForword"
+                      android:layout_width="@dimen/_31sdp"
+                      android:layout_height="@dimen/_50sdp"
+                      android:layout_marginStart="@dimen/_14sdp"
+                      android:contentDescription="@string/img_desc"
+                      app:srcCompat="@drawable/ic_play_forward"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toEndOf="@+id/ivPlayAudio"
+                      tools:ignore="UnusedAttribute" />
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:paddingHorizontal="@dimen/_17sdp"
+                    android:paddingTop="@dimen/_21sdp"
+                    android:background="@drawable/box_black_dim_corner_lr_28"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAudioTitleName">
+
+                    <TextView
+                        android:id="@+id/tvTranscriptTitel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="start"
+                        android:text="Transcript"
+                        android:textColor="@color/gray_light_text_color"
+                        android:textSize="@dimen/_11ssp"
+                        tools:ignore="UnusedAttribute"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTranscript"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="start"
+                        android:text="0:03\n
+On behalf of the mental skills team.\n\n
+0:05\n
+We're really excited to introduce a new video series called Digital Mental Minutes.\n \n
+0:09\n
+Our goal with this series is for each week to share a principle, a tool or a strategy that you can use to help elevate and level up your mental game.\n \n"
+                        android:textColor="@color/gray_light_text_color"
+                        android:textSize="@dimen/_11ssp"
+                        tools:ignore="UnusedAttribute"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTranscriptTitel"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

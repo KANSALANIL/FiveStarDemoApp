@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:orientation="vertical"
+    tools:ignore="spUsage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/drawable_curve_bottom_gray"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/please_select_image_resource"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_13ssp"
+            tools:ignore="NestedWeights" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayLight" />
+
+        <TextView
+            android:id="@+id/tvTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/take_photo"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_13ssp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayLight" />
+
+
+        <TextView
+            android:id="@+id/tvPhotoLibrary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/choose_photo"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_13ssp" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayLight" />
+
+        <TextView
+            android:id="@+id/tvTakeVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/take_video"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_13ssp" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayLight" />
+
+        <TextView
+            android:id="@+id/tvChooseVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/choose_video"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_13ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/tvCancelPopup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_curve_bottom_gray"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/textBlue"
+            android:textSize="@dimen/_13ssp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

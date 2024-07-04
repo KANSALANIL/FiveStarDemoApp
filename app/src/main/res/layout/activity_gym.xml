@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.activity.GymActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clToolbar"
+      android:layout_width="0dp"
+      android:layout_height="@dimen/_48sdp"
+      android:background="@color/grayDarker"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+<!--
+    android:layout_width="@dimen/_35sdp"-->
+      <ImageView
+          android:id="@+id/ivLogoImage"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/_49sdp"
+          android:paddingVertical="@dimen/_7sdp"
+          android:layout_marginHorizontal="@dimen/_48sdp"
+          android:contentDescription="@string/app_name"
+          android:scaleType="centerInside"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/app_logo_placeholder" />
+
+
+      <ProgressBar
+          android:id="@+id/pbGym"
+          android:layout_width="@dimen/_20sdp"
+          android:layout_height="@dimen/_20sdp"
+          android:indeterminateTint="@color/light_blue"
+          app:layout_constraintBottom_toBottomOf="@+id/ivLogoImage"
+          app:layout_constraintEnd_toEndOf="@+id/ivLogoImage"
+          app:layout_constraintStart_toStartOf="@+id/ivLogoImage"
+          app:layout_constraintTop_toTopOf="@+id/ivLogoImage"
+          tools:ignore="UnusedAttribute" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProductName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/gymMiniPlayer">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_17sdp"
+            app:cardBackgroundColor="@color/grayDarker"
+            app:cardCornerRadius="@dimen/_11sdp"
+            android:clipToPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilterCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_4sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="14"
+                tools:listitem="@layout/item_gym_category" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/gymMiniPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:keepScreenOn="true"
+        app:controller_layout_id="@layout/layout_home_mini_player"
+        app:hide_on_touch="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clProductName"
+        app:resize_mode="fit"
+        app:show_buffering="never"
+        app:show_timeout="0"
+        app:use_artwork="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

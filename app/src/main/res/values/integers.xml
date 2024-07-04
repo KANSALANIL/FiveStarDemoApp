@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer name="phone_min">10</integer>
+    <integer name="phone_max">15</integer>
+    <integer name="pass_min">6</integer>
+    <integer name="pass_max">20</integer>
+    <integer name="name_max">30</integer>
+    <integer name="email_max">50</integer>
+    <integer name="title_max">25</integer>
+    <integer name="days_max">3</integer>
+    <integer name="hours_max">5</integer>
+    <integer name="minutes_max">2</integer>
+    <integer name="focus_max">100</integer>
+    <integer name="goal_max">100</integer>
+    <integer name="state_college_max">50</integer>
+
+    <integer name="card_number">16</integer>
+    <integer name="cvv_number">3</integer>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/grayDark</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">@color/dark_brownish_red</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_profile_text">#EDEDF7</color>
+    <color name="white_chat">#D0D0D0</color>
+    <color name="color_tab_text">#CACACA</color>
+
+    <color name="black">#000000</color>
+
+    <color name="blackTransparent90">#CC171717</color>
+    <color name="blackTransparent70">#4D000000</color>
+    <color name="blackTransparent80">#CC000000</color>
+    <color name="blackTransparent_80">#CC1A1A1A</color>
+    <color name="blackTransparent50">#80000000</color>
+    <color name="blackTransparent20">#1A171717</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="whiteTransparent40">#66FFFFFF</color>
+    <color name="whiteTransparent50">#80FFFFFF</color>
+    <color name="whiteTransparent60">#99FFFFFF</color>
+    <color name="whiteTransparent70">#B3FFFFFF</color>
+    <color name="whiteTransparent90">#BFFFFFFF</color>
+    <color name="grayTab">#CECEE0</color>
+
+    <color name="dark_brownish_red">#B71137</color>
+    <color name="dark_green">#155F3E</color>
+    <color name="brownish_light">#48B71137</color>
+    <color name="light_brownish_red">#2EB71137</color>
+    <color name="brownish_red_dim">#4DB71137</color>
+
+    <color name="blue">#43C2CB</color>
+    <color name="light_blue">#60FFFF</color>
+    <color name="blueDark">#002B4E</color>
+    <color name="yellow">#f2d23d</color>
+    <color name="color_gray_box">#40CECEE0</color>
+
+    <color name="divider">@color/grayDark</color>
+
+    <color name="blackDim">#171717</color>
+    <color name="blackDimDark">#131313</color>
+    <color name="blackDark">#0F0F0F</color>
+    <color name="grayDark">#222222</color>
+    <color name="grayDarker">#121212</color>
+    <color name="grayBorder">#494949</color>
+    <color name="grayMedium">#616161</color>
+    <color name="grayDim">#414141</color>
+    <color name="gray">#686868</color>
+    <color name="gray_light">#676767</color>
+    <color name="gray_light_view_line">#3C3C3C</color>
+    <color name="grayLight">#AEAEAE</color>
+    <color name="grayLightest">#DCDCDC</color>
+    <color name="grayLighter">#F0F0F0</color>
+    <color name="green">#00C69F</color>
+    <color name="red">#FF144A</color>
+    <color name="gray_slider">#2B2E32</color>
+    <color name="white_slider">#DBDDE0</color>
+    <color name="gray_text_time">#6B6B6B</color>
+    <color name="gray_text_">#787878</color>
+    <color name="gray_text_item_count">#A0A0A0</color>
+    <color name="bg_yellow_color">#FEBC01</color>
+    <color name="hint_gray_color">#979797</color>
+    <color name="border_gray_color">#464646</color>
+
+    <color name="texBlack">@color/black</color>
+    <color name="textWhite">@color/white</color>
+    <color name="textWhiteTransparent40">@color/whiteTransparent40</color>
+    <color name="textWhiteTransparent50">@color/whiteTransparent50</color>
+    <color name="textWhiteTransparent60">@color/whiteTransparent60</color>
+    <color name="textGrayMedium">@color/grayMedium</color>
+    <color name="textGray">@color/gray</color>
+    <color name="textGrayLight">@color/grayLight</color>
+    <color name="textGrayLightest">@color/grayLightest</color>
+    <color name="textBlue">@color/blue</color>
+    <color name="textLightBlue">@color/light_blue</color>
+    <color name="textBlueDark">@color/blueDark</color>
+    <color name="textGrayDark">@color/grayDark</color>
+    <color name="gray_hint_text_color">#989898</color>
+    <color name="gray_light_text_color">@color/gray_light</color>
+    <color name="gray_light_text_count">@color/gray_text_item_count</color>
+
+</resources>

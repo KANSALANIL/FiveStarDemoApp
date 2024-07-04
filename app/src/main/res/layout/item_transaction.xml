@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/_14sdp">
+
+    <TextView
+        android:id="@+id/tvTransactionId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/urbanist_bold_700"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_14ssp"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/tvPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_bold_700"
+        tools:text="$15.00"
+        android:textColor="@color/textBlue"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionId"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDateTime"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/ivTimer"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTransactionId"
+        app:srcCompat="@drawable/ic_timer_blue" />
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_semibold_600"
+        tools:text="Mar 07, 2019, 3:44 pm"
+        android:textColor="@color/textBlue"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/tvTransactionId"
+        app:layout_constraintTop_toBottomOf="@id/tvTransactionId" />
+
+    <TextView
+        android:id="@+id/tvStatus_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:text="@string/status"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDateTime" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        tools:text="Completed"
+        android:textColor="@color/textWhiteTransparent50"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toEndOf="@+id/tvStatus_"
+        app:layout_constraintTop_toTopOf="@id/tvStatus_"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStatus_"/>
+
+    <TextView
+        android:id="@+id/tvPaymentType_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        android:text="@string/payment_type"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@+id/tvStatus_"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus_" />
+
+    <TextView
+        android:id="@+id/tvPaymentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:fontFamily="@font/urbanist_medium_500"
+        tools:text="Card"
+        android:textColor="@color/textWhiteTransparent50"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toEndOf="@+id/tvPaymentType_"
+        app:layout_constraintTop_toTopOf="@id/tvPaymentType_"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPaymentType_"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@drawable/line"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvPaymentType_"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

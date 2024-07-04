@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="divider">@dimen/_1sdp</dimen>
+    <dimen name="divider_thin">0.5dp</dimen>
+    <dimen name="popup_border">0.3dp</dimen>
+
+    <dimen name="ripple_radius">@dimen/_50sdp</dimen>
+
+    <dimen name="elevation_item_2">2dp</dimen>
+    <dimen name="elevation_item_4">4dp</dimen>
+    <dimen name="elevation_item_8">8dp</dimen>
+
+    <dimen name="tab_home_padding">@dimen/_21sdp</dimen>
+
+    <dimen name="image_border">1.5dp</dimen>
+    <dimen name="image_border_thin">0.5dp</dimen>
+    <dimen name="quotation_width">@dimen/_12sdp</dimen>
+    <dimen name="quotation_hight">@dimen/_10sdp</dimen>
+
+</resources>

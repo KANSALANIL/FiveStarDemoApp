@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/box_black_dim_top_lr_corner_32"
+    android:paddingStart="@dimen/_17sdp"
+    android:paddingTop="@dimen/_28sdp"
+    android:paddingEnd="@dimen/_17sdp"
+    android:paddingBottom="@dimen/_28sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:ignore="spUsage">
+
+    <TextView
+        android:id="@+id/tvMasteredDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/mastered_description"
+        android:textAlignment="center"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvMasteredMovement"
+        app:layout_constraintEnd_toEndOf="@id/btnMastered"
+        app:layout_constraintStart_toStartOf="@id/btnCancel" />
+
+    <TextView
+        android:id="@+id/tvMasteredMovement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_21sdp"
+        android:fontFamily="@font/urbanist_regular_400"
+        android:text="@string/movement"
+        android:textAlignment="center"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toTopOf="@id/btnMastered"
+        app:layout_constraintEnd_toEndOf="@id/btnMastered"
+        app:layout_constraintStart_toStartOf="@id/btnCancel" />
+
+    <ImageView
+        android:id="@+id/ivMaster"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintBottom_toBottomOf="@id/tvMasteredMovement"
+        app:layout_constraintStart_toEndOf="@id/tvMasteredMovement"
+        app:layout_constraintTop_toTopOf="@id/tvMasteredMovement"
+        app:srcCompat="@drawable/ic_m_blue" />
+
+    <Button
+        android:id="@+id/btnMastered"
+        style="@style/ButtonSmallBlueStyle"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        tools:ignore="UnusedAttribute"
+        android:text="@string/mastered" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@style/ButtonSmallGrayStyle"
+        android:stateListAnimator="@null"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnMastered"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
